@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import jp.co.aforce.bean.Bean2;
+import jp.co.aforce.bean.ItemBean;
 import jp.co.aforce.dao.ItemDao;
 
 /**
@@ -45,7 +45,7 @@ public class ItemSearch extends HttpServlet {
 		String keyword = request.getParameter("item_name");
 		
 		ItemDao itemDao = new ItemDao();
-		List<Bean2> list = itemDao.search(keyword);
+		List<ItemBean> list = itemDao.search(keyword);
 		
 		request.setAttribute("list", list);
 		

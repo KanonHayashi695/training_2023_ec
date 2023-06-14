@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import jp.co.aforce.bean.Bean;
-import jp.co.aforce.dao.ShoppingsiteDao;
+import jp.co.aforce.bean.MemberBean;
+import jp.co.aforce.dao.MemberDao;
 
 /**
  * Servlet implementation class Servlet
@@ -60,7 +60,7 @@ public class RegistServlet extends HttpServlet {
 		String phone_number = request.getParameter("phone_number");
 		String mail_address =request.getParameter("mail_address");
 		
-        Bean p = new Bean();
+        MemberBean p = new MemberBean();
 		
 		p.setMember_id(member_id);
 		p.setPassword(password);
@@ -72,8 +72,8 @@ public class RegistServlet extends HttpServlet {
 		p.setJob(job);
 		p.setPhone_number(phone_number);
 		p.setMail_address(mail_address);
-	    ShoppingsiteDao shoppingsiteDao = new ShoppingsiteDao();
-		int line = shoppingsiteDao.insert(p);
+	    MemberDao memberDao = new MemberDao();
+		int line = memberDao.insert(p);
 		
 		if(line > 0) {
 			request.getRequestDispatcher("home.jsp").forward(request,response);

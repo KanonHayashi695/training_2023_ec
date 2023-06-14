@@ -2,7 +2,7 @@ package jp.co.aforce.bean;
 
 import java.io.Serializable;
 
-public class Bean implements Serializable{
+public class MemberBean implements Serializable{
     
 	private String member_id;
 	private String password;

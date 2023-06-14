@@ -2,7 +2,7 @@ package jp.co.aforce.bean;
 
 import java.io.Serializable;
 
-public class Bean2 implements Serializable{
+public class ItemBean implements Serializable{
     
 	//private int item_id;
 	private String item_name;

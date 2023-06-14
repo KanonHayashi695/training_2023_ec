@@ -9,8 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import jp.co.aforce.bean.Bean;
-import jp.co.aforce.dao.LoginDao;
+import jp.co.aforce.bean.MemberBean;
+import jp.co.aforce.dao.MemberDao;
 
 /**
  * Servlet implementation class LoginServlet
@@ -51,11 +51,11 @@ public class Search extends HttpServlet {
         String member_id = request.getParameter("member_id");
         String password = request.getParameter("password");
 		   
-        LoginDao loginDao = new LoginDao();
-	    Bean bean;
+        MemberDao memberDao = new MemberDao();
+	    MemberBean bean;
 	   
 		try {
-			bean = loginDao.search(member_id, password);
+			bean = memberDao.search(member_id, password);
 			if(bean != null) {
 				session.setAttribute("member", bean);
 				request.getRequestDispatcher("home.jsp").forward(request,response);
