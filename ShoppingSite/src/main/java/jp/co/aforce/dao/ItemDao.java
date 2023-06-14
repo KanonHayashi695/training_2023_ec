@@ -2,6 +2,7 @@ package jp.co.aforce.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +15,25 @@ public class ItemDao extends Dao{
 		Connection con = getConnection();
 		
 		PreparedStatement st = con.prepareStatement(
-				"");
+				"select * from item_list where name like ?");
+		st.setString(1, "%+keyword+%");
+		ResultSet rs = st.executeQuery();
+		
+		while(rs.next()) {
+			ItemBean i = new ItemBean();
+			i.setItem_name(rs.getString("item_name"));
+			i.setPrice(rs.getInt("price"));
+			i.setCategory(rs.getString("category"));
+			i.setRelease_year(rs.getInt("release_year"));
+			i.setRelease_month(rs.getInt("release_month"));
+			i.setRelease_day(rs.getInt("release_day"));
+			i.setLevel(rs.getString("level"));
+			i.setStock(rs.getInt("stock"));
+			list.add(i);
+		}
+		
+		st.close();
+		con.close();
 		
 		return list;
 	}
