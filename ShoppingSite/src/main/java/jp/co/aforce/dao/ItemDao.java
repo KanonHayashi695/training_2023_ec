@@ -2,7 +2,10 @@ package jp.co.aforce.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+ 
 import java.sql.ResultSet;
+
+ 
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,6 +37,7 @@ public class ItemDao extends Dao{
 		
 		st.close();
 		con.close();
+
 		
 		return list;
 	}
