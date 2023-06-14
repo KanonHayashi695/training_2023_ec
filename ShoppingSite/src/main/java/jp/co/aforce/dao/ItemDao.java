@@ -1,13 +1,22 @@
 package jp.co.aforce.dao;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.List;
 
-import jp.co.aforce.bean.Bean2;
+import jp.co.aforce.bean.ItemBean;
 
 public class ItemDao extends Dao{
-	public List<Bean2> search(String keyword) {
-		List<Bean2> list = new ArrayList<>();
+	public List<ItemBean> search(String keyword) throws Exception {
+		List<ItemBean> list = new ArrayList<>();
+		
+		Connection con = getConnection();
+		
+		PreparedStatement st = con.prepareStatement(
+				"");
+		
+		return list;
 	}
 		
 }

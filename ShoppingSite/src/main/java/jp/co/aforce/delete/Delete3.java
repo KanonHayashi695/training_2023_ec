@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import jp.co.aforce.dao.DeleteDao;
+import jp.co.aforce.dao.MemberDao;
 
 /**
  * Servlet implementation class Delete3
@@ -48,8 +48,8 @@ public class Delete3 extends HttpServlet {
 		String member_id =request.getParameter("member_id");
 		String password =request.getParameter("password");
 		
-        DeleteDao deleteDao =  new DeleteDao();
-        int line = deleteDao.delete(member_id, password);
+        MemberDao memberDao =  new MemberDao();
+        int line = memberDao.delete(member_id, password);
         
         if(line > 0) {
         	request.getRequestDispatcher("delete2.jsp").forward(request,response);
