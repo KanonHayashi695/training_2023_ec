@@ -45,9 +45,23 @@ public class ItemSearch extends HttpServlet {
 		String keyword = request.getParameter("item_name");
 		
 		ItemDao itemDao = new ItemDao();
-		List<ItemBean> list = itemDao.search(keyword);
+
+		List<ItemBean> list;
+		try {
+			list = itemDao.search(keyword);
+			request.setAttribute("list", list);
+			
+			request.getRequestDispatcher("itemsearchsuccess.jsp").forward(request,response);
+			
+		} catch (Exception e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
 		
-		request.setAttribute("list", list);
+
+		List<ItemBean> list = itemDao.search(keyword);
+
+		
 		
 	}
 

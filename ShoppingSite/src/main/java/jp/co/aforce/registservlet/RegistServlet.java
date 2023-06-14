@@ -76,8 +76,10 @@ public class RegistServlet extends HttpServlet {
 		int line = memberDao.insert(p);
 		
 		if(line > 0) {
-			request.getRequestDispatcher("home.jsp").forward(request,response);
-		} else {
+			request.getRequestDispatcher("regist2.jsp").forward(request,response);
+		} else if(){
+		    out.prinln("登録が重複しています。");
+		}else {
 		    out.println("登録できませんでした。");
 		}
 		
