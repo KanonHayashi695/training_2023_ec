@@ -15,4 +15,8 @@ public class Dao {
 		}
 		return ds.getConnection();
 	}
+	
+	public void closeConnection(Connection connection) {
+		// TODO 自動生成されたメソッド・スタブ
+	}
 }

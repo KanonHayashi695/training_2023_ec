@@ -13,11 +13,25 @@ public class ItemBean implements Serializable{
 	private int release_day;
 	private String level;
 	private int stock;
-	
+		
+	public ItemBean(String item_name, int price, String category, int release_year, int release_month, int release_day, String level, int stock) {
+		this.item_name = item_name;
+		this.price = price;
+		this.category = category;
+		this.release_year = release_year;
+		this.release_month = release_month;
+		this.release_day = release_day;
+		this.level = level;
+		this.stock = stock;
+	}
 	/*public int getItem_id() {
 		return item_id;
 	}*/
 	
+	public ItemBean() {
+		// TODO 自動生成されたコンストラクター・スタブ
+	}
+
 	public String getItem_name() {
 		return item_name;
 	}
