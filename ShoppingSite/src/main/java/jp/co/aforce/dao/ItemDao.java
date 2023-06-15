@@ -34,6 +34,7 @@ public class ItemDao extends Dao{
 		
 		st.close();
 		con.close();
+
 		
 		return list;
 	}

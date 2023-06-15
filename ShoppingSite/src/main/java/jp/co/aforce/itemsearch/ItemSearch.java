@@ -45,6 +45,7 @@ public class ItemSearch extends HttpServlet {
 		String keyword = request.getParameter("item_name");
 		
 		ItemDao itemDao = new ItemDao();
+
 		List<ItemBean> list;
 		try {
 			list = itemDao.search(keyword);
@@ -57,6 +58,9 @@ public class ItemSearch extends HttpServlet {
 			e.printStackTrace();
 		}
 		
+
+		List<ItemBean> list = itemDao.search(keyword);
+
 		
 		
 	}
