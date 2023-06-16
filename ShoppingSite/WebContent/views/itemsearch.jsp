@@ -14,5 +14,9 @@
    <p><input type = "submit" value = "検索"></p>
   </form>
   
+  <form action = "carttransition" method = "post">
+   <p><input type = "submit" value = "戻る"></p>
+  </form>
+  
 </body>
 </html>

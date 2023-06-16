@@ -29,10 +29,5 @@
      <p><input type = "submit" value = "削除"></p>
    </form>
    
-   <form action = "logout" method = "post">
-    <p>ログアウトする</p>
-    <p><input type = "submit" value = "ログアウト"></p>
-   </form>
-   
 </body>
 </html>
