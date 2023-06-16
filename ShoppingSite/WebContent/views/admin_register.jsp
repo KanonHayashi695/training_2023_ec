@@ -62,7 +62,7 @@
 			<option value="">-- 選択してください --</option>
 			<option value="初心者向け">初心者向け</option>
 			<option value="中級者向け">中級者向け</option>
-			<option value="中級者向け">上級者向け</option>
+			<option value="上級者向け">上級者向け</option>
 			<option value="―">―</option>
 		</select><br><br>
 		
