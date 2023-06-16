@@ -14,7 +14,8 @@ public class ItemBean implements Serializable{
 	private String level;
 	private int stock;
 		
-	public ItemBean(String item_name, int price, String category, int release_year, int release_month, int release_day, String level, int stock) {
+	public ItemBean(int item_id, String item_name, int price, String category, int release_year, int release_month, int release_day, String level, int stock) {
+		this.item_id = item_id;
 		this.item_name = item_name;
 		this.price = price;
 		this.category = category;
@@ -24,6 +25,7 @@ public class ItemBean implements Serializable{
 		this.level = level;
 		this.stock = stock;
 	}
+
 	public int getItem_id() {
 		return item_id;
 	}
@@ -31,6 +33,7 @@ public class ItemBean implements Serializable{
 	public ItemBean() {
 		// TODO 自動生成されたコンストラクター・スタブ
 	}
+
 
 	public String getItem_name() {
 		return item_name;
@@ -99,4 +102,5 @@ public class ItemBean implements Serializable{
 	public void setStock(int stock) {
 		this.stock = stock;
 	}
+
 }

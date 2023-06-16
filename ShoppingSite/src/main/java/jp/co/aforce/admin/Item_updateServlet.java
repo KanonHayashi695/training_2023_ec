@@ -12,16 +12,16 @@ import jp.co.aforce.bean.ItemBean;
 import jp.co.aforce.dao.ItemDAO2;
 
 /**
- * Servlet implementation class Item_set
+ * Servlet implementation class Item_updateServlet
  */
-@WebServlet("/views/Item_registerServlet")
-public class Item_registerServlet extends HttpServlet {
+@WebServlet("/views/Item_updateServlet")
+public class Item_updateServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Item_registerServlet() {
+    public Item_updateServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -42,7 +42,7 @@ public class Item_registerServlet extends HttpServlet {
 		response.setContentType("text/html; charset=UTF-8");
 		request.setCharacterEncoding("UTF-8");
 		
-		int itemId = 0;
+		int itemId = Integer.parseInt(request.getParameter("item_id"));
 		String itemName = request.getParameter("item_name");
 		int price = Integer.parseInt(request.getParameter("price"));
 		String category = request.getParameter("category");
@@ -52,32 +52,27 @@ public class Item_registerServlet extends HttpServlet {
 		String level = request.getParameter("level");
 		int stock = Integer.parseInt(request.getParameter("stock"));
 		
+		ItemBean item = new ItemBean();
+		item.setItem_id(itemId);
+		item.setItem_name(itemName);
+		item.setPrice(price);
+		item.setCategory(category);
+		item.setRelease_year(releaseYear);
+		item.setRelease_month(releaseMonth);
+		item.setRelease_day(releaseDay);
+		item.setLevel(level);
+		item.setStock(stock);
 		ItemDAO2 itemDAO2 = new ItemDAO2();
-		boolean itemChecks = false;
-		try {
-			itemChecks = itemDAO2.itemCheck(itemName);
-		} catch (Exception e) {
-			// TODO 自動生成された catch ブロック
-			e.printStackTrace();
-		}
-		if(itemChecks) {
-			response.getWriter().println("商品情報が既に存在します。");
-			return;
-		}
-		
-		//商品情報の登録
-		ItemBean item = new ItemBean(itemId, itemName, price, category, releaseYear, releaseMonth, releaseDay, level, stock);
 		boolean success = false;
 		try {
-			success = itemDAO2.registerItem(item);
+			 success = itemDAO2.updateItem(item);
 		} catch (Exception e) {
-			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		}
 		if (success) {
-			response.getWriter().println("商品情報の登録に成功しました。");
-		} else {
-			response.getWriter().println("商品情報の登録に失敗しました。");
-		}
-	}
+            response.getWriter().println("商品情報の更新に成功しました。");
+        } else {
+            response.getWriter().println("商品情報の更新に失敗しました。");
+        }
+    }
 }
