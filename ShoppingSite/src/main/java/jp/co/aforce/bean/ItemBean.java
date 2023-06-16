@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class ItemBean implements Serializable{
     
-	//private int item_id;
+	private int item_id;
 	private String item_name;
 	private int price;
 	private String category;
@@ -24,9 +24,9 @@ public class ItemBean implements Serializable{
 		this.level = level;
 		this.stock = stock;
 	}
-	/*public int getItem_id() {
+	public int getItem_id() {
 		return item_id;
-	}*/
+	}
 	
 	public ItemBean() {
 		// TODO 自動生成されたコンストラクター・スタブ
@@ -64,9 +64,9 @@ public class ItemBean implements Serializable{
 		return stock;
 	}
 	
-/*	public void setItem_id(int item_id) {
-		this.item_id = item_id;*/
-	//}
+	public void setItem_id(int item_id) {
+		this.item_id = item_id;
+	}
 	
 	public void setItem_name(String item_name) {
 		this.item_name = item_name;

@@ -77,8 +77,8 @@ public class RegistServlet extends HttpServlet {
 		
 		if(line > 0) {
 			request.getRequestDispatcher("regist2.jsp").forward(request,response);
-		} else if(){
-		    out.prinln("登録が重複しています。");
+		} else if(line >= 2){
+		    out.println("登録が重複しています。");
 		}else {
 		    out.println("登録できませんでした。");
 		}

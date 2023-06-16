@@ -11,14 +11,16 @@ import jp.co.aforce.bean.ItemBean;
 public class ItemDao extends Dao{
 	public List<ItemBean> search(String keyword) throws Exception {
 		List<ItemBean> list = new ArrayList<>();
+		int n = 0;
 		
 		Connection con = getConnection();
 		
 		PreparedStatement st = con.prepareStatement(
-				"select * from item_list where name like ?");
-		st.setString(1, "%+keyword+%");
+				"select * from item_list where item_name like ?");
+		st.setString(1, "%"+keyword+"%");
 		ResultSet rs = st.executeQuery();
 		
+			
 		while(rs.next()) {
 			ItemBean i = new ItemBean();
 			i.setItem_name(rs.getString("item_name"));
@@ -30,6 +32,11 @@ public class ItemDao extends Dao{
 			i.setLevel(rs.getString("level"));
 			i.setStock(rs.getInt("stock"));
 			list.add(i);
+			n  += 1;
+		}
+		
+		if(n == 0) {
+			list = null;
 		}
 		
 		st.close();

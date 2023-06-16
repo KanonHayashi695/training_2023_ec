@@ -7,6 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-ログイン出来ました
+
+   <p>カートに商品がありません。</p>
+  <form action = "carttransition" method = "post">
+   <p><input type = "submit" value = "戻る"></p>
+  </form>
+  
 </body>
 </html>
