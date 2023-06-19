@@ -6,7 +6,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>サイト名_商品情報検索_管理者</title>
+	<title>サイト名_商品情報検索結果_管理者</title>
 </head>
 <body>
 <%@ page import="jp.co.aforce.bean.ItemBean" %>
@@ -37,17 +37,26 @@
 				<td>
 					<form action="Item_editServlet" method="post">
 						<input type="hidden" name="item_id" value="<%=i.getItem_id() %>">
- 						<input type="submit" value="更新">
- 					</form>
-					<form action="#" method="post">
+					<input type="submit" value="更新">
+					</form>
+					<form action="Item_DeleteServlet" method="post" onsubmit="return confirmDelete()">
 						<input type="hidden" name="item_id" value="<%=i.getItem_id() %>">
- 						<input type="submit" value="削除">
- 					</form>
+						<input type="submit" value="削除">
+				</form>
 				</td>
 			</tr>
 		<% } %> 
 	</table>
+	
+	<script>
+		function confirmDelete() {
+			return confirm("本当に削除しますか？");
+		}
+	</script>
+	    
 	<a href="admin_itemSearchForm.jsp">商品検索</a>
+	
+	
 <% 
 } catch (Exception e) {
 	e.printStackTrace();

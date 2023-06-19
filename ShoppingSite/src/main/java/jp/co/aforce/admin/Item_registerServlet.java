@@ -75,7 +75,7 @@ public class Item_registerServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 		if (success) {
-			response.getWriter().println("商品情報の登録に成功しました。");
+			request.getRequestDispatcher("admin_register_ok.jsp").forward(request, response);
 		} else {
 			response.getWriter().println("商品情報の登録に失敗しました。");
 		}

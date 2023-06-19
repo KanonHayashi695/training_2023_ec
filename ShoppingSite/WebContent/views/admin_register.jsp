@@ -59,7 +59,7 @@
 		<!-- 難易度 -->
 		<label for="level">■難易度<br></label>
 		<select id="level" name="level" required>
-			<option value="">-- 選択してください --</option>
+			<option value="">-- 選択してください --</option> 
 			<option value="初心者向け">初心者向け</option>
 			<option value="中級者向け">中級者向け</option>
 			<option value="上級者向け">上級者向け</option>

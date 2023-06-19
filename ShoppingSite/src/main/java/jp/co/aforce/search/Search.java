@@ -55,6 +55,9 @@ public class Search extends HttpServlet {
 	    MemberBean bean;
 	   
 		try {
+			if(member_id.equals("admin") && password.equals("admin")) {
+				request.getRequestDispatcher("admin_index.jsp").forward(request,response);
+			} else {
 			bean = memberDao.search(member_id, password);
 			if(bean != null) {
 				session.setAttribute("member", bean);
@@ -62,7 +65,7 @@ public class Search extends HttpServlet {
 			} else {
 				request.getRequestDispatcher("login2.jsp").forward(request,response);			
 			}
-			
+			}
 		} catch (Exception e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
