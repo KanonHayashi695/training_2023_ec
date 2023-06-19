@@ -21,9 +21,9 @@
 		<input type="hidden" name="item_id" value="<%= i.getItem_id() %>">
 		<label for="item_name">商品名:</label>
 		<input type="text" id="item_name" name="item_name" value="<%= i.getItem_name() %>"><br>
-		<label for="price">価格:</label>
+		<label for="price">価格　:</label>
 		<input type="text" id="price" name="price" value="<%= i.getPrice() %>"><br>
-		<label for="category">分類:</label>
+		<label for="category">分類　:</label>
 		<input type="text" id="category" name="category" value="<%= i.getCategory() %>"><br>
 		<label for="release_year">発売年:</label>
 		<input type="text" id="release_year" name="release_year" value="<%= i.getRelease_year() %>"><br>
@@ -36,8 +36,17 @@
 		<label for="stock">在庫数:</label>
 		<input type="text" id="stock" name="stock" value="<%= i.getStock() %>"><br>
 		<input type="submit" value="更新">
+		<button type="buttun" onclick="goBack()">戻る</button>
 	
 	</form>
+	
+	<script>
+		<!-- 戻るボタンがrequiredを無視 -->
+		function goBack(){
+			window.history.back();
+		}
+	</script>
+	
 <% 
 } catch (Exception e) {
 	e.printStackTrace();

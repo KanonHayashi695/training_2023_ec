@@ -53,6 +53,8 @@ public class ItemDAO2 extends Dao{
 				return false;
 			}
 	}
+	
+	//商品の表示
 	public List<ItemBean> getItemList() throws Exception {
 		Connection con = getConnection();
 		PreparedStatement st = con.prepareStatement("SELECT * FROM ITEM_LIST");
@@ -77,6 +79,7 @@ public class ItemDAO2 extends Dao{
 		return itemList;
 	}
 
+	//商品の検索
 	public List<ItemBean> search(String item_name) throws Exception {
 		List<ItemBean> itemList = new ArrayList<>();
 		Connection con = getConnection();
@@ -103,6 +106,7 @@ public class ItemDAO2 extends Dao{
 		return itemList;
 	}
 	
+	//商品の更新
 	public boolean updateItem(ItemBean item) throws Exception {
 		Connection con = getConnection();
 		PreparedStatement st = con.prepareStatement(
@@ -123,9 +127,10 @@ public class ItemDAO2 extends Dao{
 		System.out.println(item.getItem_id());
 		System.out.println(item.getItem_name());
 		System.out.println(item.getStock());
-//		int i = 1;
 		return i > 0;
 	}
+	
+	//商品IDの取得
 	public ItemBean getItemById(int item_id) throws Exception {
 		Connection con = getConnection();
 		PreparedStatement st = con.prepareStatement("SELECT * FROM item_list WHERE item_id = ?");
@@ -148,6 +153,17 @@ public class ItemDAO2 extends Dao{
 		st.close();
 		closeConnection(con);
 		return item;
+	}
+
+	//商品の削除
+	public boolean deleteItem(int item_id) throws Exception {
+		Connection con = getConnection();
+		PreparedStatement st = con.prepareStatement("DELETE FROM item_list WHERE item_id = ?");
+		st.setInt(1, item_id);
+		int i = st.executeUpdate();
+		st.close();
+		closeConnection(con);
+		return i > 0;
 	}
 		
 }

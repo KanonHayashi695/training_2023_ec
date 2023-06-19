@@ -70,7 +70,7 @@ public class Item_updateServlet extends HttpServlet {
 			e.printStackTrace();
 		}
 		if (success) {
-            response.getWriter().println("商品情報の更新に成功しました。");
+			request.getRequestDispatcher("admin_itemUpdate_ok.jsp").forward(request, response);
         } else {
             response.getWriter().println("商品情報の更新に失敗しました。");
         }
