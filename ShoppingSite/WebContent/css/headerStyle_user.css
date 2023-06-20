@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+* {
+margin:0; padding:0;
+}
+
+/* ヘッダー */
+header {
+	background-color: #007DDD;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #FFF;
+}
+
+.title {
+	text-align: left;
+}
+
+.title h1 {
+	font-size: 27px;
+	margin: 0;
+}
+
+.title h2 {
+	font-size: 12px;
+	margin: 0;
+}
+
+.welcomeMessage{
+	margin-right: 10px;
+	
+}
+.actionButtons a {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.myPageButton img,
+.cartButton img {
+	width: 32px;
+	height: 32px;
+	vertical-align: middle;
+	filter: brightness(0) invert(1);
+}
+.myPageButton img {
+	margin-right: 5px;
+}
+
+.cartButton img {
+	margin-left: 5px;
+}
+
+.myPageButton:hover,
+.cartButton:hover {
+	opacity: 0.7;
+}
+
+/* フッター */
+footer p{
+	margin: 0;
+}
+
+
+
+
