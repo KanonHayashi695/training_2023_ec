@@ -1,4 +1,4 @@
-package jp.co.aforce.logout;
+package jp.co.aforce.logout1main;
 
 import java.io.IOException;
 

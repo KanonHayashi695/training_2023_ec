@@ -1,4 +1,4 @@
-package jp.co.aforce.delete;
+package jp.co.aforce.updatetransition;
 
 import java.io.IOException;
 
@@ -9,16 +9,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Delete
+ * Servlet implementation class Update
  */
-@WebServlet("/views/delete")
-public class Delete extends HttpServlet {
+@WebServlet("/views/update")
+public class Update extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Delete() {
+    public Update() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -38,7 +38,7 @@ public class Delete extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
-		request.getRequestDispatcher("delete.jsp").forward(request,response);
+		request.getRequestDispatcher("home.jsp").forward(request,response);
 	}
 
 }
