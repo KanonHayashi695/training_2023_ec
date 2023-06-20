@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>サイト名_管理者画面</title>
+<title>DANRAKU_管理者画面</title>
 </head>
 <body>
 
