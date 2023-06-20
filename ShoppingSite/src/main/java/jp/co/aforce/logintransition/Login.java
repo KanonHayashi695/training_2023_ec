@@ -1,4 +1,4 @@
-package jp.co.aforce.login;
+package jp.co.aforce.logintransition;
 
 import java.io.IOException;
 
@@ -9,16 +9,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Login3
+ * Servlet implementation class servlet
  */
-@WebServlet("/views/login3")
-public class Login3 extends HttpServlet {
+@WebServlet("/views/login")
+public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Login3() {
+    public Login() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -38,7 +38,7 @@ public class Login3 extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
-		request.getRequestDispatcher("home.jsp").forward(request,response);
+		request.getRequestDispatcher("login.jsp").forward(request,response);
 	}
 
 }

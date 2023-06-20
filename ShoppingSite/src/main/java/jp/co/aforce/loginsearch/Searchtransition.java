@@ -1,4 +1,4 @@
-package jp.co.aforce.login;
+package jp.co.aforce.loginsearch;
 
 import java.io.IOException;
 
@@ -9,16 +9,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class servlet
+ * Servlet implementation class Searchtransition
  */
-@WebServlet("/views/login")
-public class Login extends HttpServlet {
+@WebServlet("/views/searchtransition")
+public class Searchtransition extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Login() {
+    public Searchtransition() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,7 +29,6 @@ public class Login extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		doPost(request, response);
 	}
 
 	/**
@@ -38,7 +37,7 @@ public class Login extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
-		request.getRequestDispatcher("login.jsp").forward(request,response);
+		request.getRequestDispatcher("itemsearch.jsp").forward(request,response);
 	}
 
 }

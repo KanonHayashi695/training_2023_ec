@@ -1,4 +1,4 @@
-package jp.co.aforce.logout;
+package jp.co.aforce.delete3main;
 
 import java.io.IOException;
 
@@ -7,19 +7,18 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class Logout
+ * Servlet implementation class Delete
  */
-@WebServlet("/views/logout")
-public class Logout extends HttpServlet {
+@WebServlet("/views/delete")
+public class Delete extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Logout() {
+    public Delete() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -39,14 +38,7 @@ public class Logout extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
-		HttpSession session = request.getSession();
-		
-		if(session.getAttribute("member") != null) {
-			session.removeAttribute("member");
-			request.getRequestDispatcher("logout.jsp").forward(request,response);
-		} else {
-			request.getRequestDispatcher("logout2.jsp").forward(request,response);
-		}
+		request.getRequestDispatcher("delete.jsp").forward(request,response);
 	}
 
 }

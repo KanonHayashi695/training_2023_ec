@@ -1,4 +1,4 @@
-package jp.co.aforce.update;
+package jp.co.aforce.logout1main;
 
 import java.io.IOException;
 
@@ -7,18 +7,19 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class Update
+ * Servlet implementation class Logout
  */
-@WebServlet("/views/update")
-public class Update extends HttpServlet {
+@WebServlet("/views/logout")
+public class Logout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Update() {
+    public Logout() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -38,7 +39,14 @@ public class Update extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
-		request.getRequestDispatcher("home.jsp").forward(request,response);
+		HttpSession session = request.getSession();
+		
+		if(session.getAttribute("member") != null) {
+			session.removeAttribute("member");
+			request.getRequestDispatcher("logout.jsp").forward(request,response);
+		} else {
+			request.getRequestDispatcher("logout2.jsp").forward(request,response);
+		}
 	}
 
 }

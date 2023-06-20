@@ -1,4 +1,4 @@
-package jp.co.aforce.update;
+package jp.co.aforce.updatetransition;
 
 import java.io.IOException;
 
@@ -9,16 +9,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Update3
+ * Servlet implementation class Update2
  */
-@WebServlet("/views/update3")
-public class Update3 extends HttpServlet {
+@WebServlet("/views/update2")
+public class Update2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Update3() {
+    public Update2() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -38,7 +38,7 @@ public class Update3 extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
-		
+		request.getRequestDispatcher("update.jsp").forward(request,response);
 	}
 
 }

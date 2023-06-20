@@ -8,11 +8,7 @@
 </head>
 <body>
 
-   <p>登録できました。</p>
-  <form action = "login3" method = "post">
-   <p><input type = "submit" value = "戻る"></p> 
-  </form>
-   
+   <p>お買い上げありがとうございました。</p>
 
 </body>
 </html>
