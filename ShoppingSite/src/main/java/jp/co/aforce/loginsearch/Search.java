@@ -63,7 +63,7 @@ public class Search extends HttpServlet {
 				session.setAttribute("member", bean);
 				request.getRequestDispatcher("itemmenu.jsp").forward(request,response);
 			} else {
-				request.getRequestDispatcher("login2.jsp").forward(request,response);			
+				request.getRequestDispatcher("nologin.jsp").forward(request,response);			
 			}
 			}
 		} catch (Exception e) {

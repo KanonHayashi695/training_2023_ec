@@ -7,6 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<p>ログインできません</p>
+
+  <form action = "login" method = "post">
+   <p>ログインできません</p>
+  <p><input type = "submit" value = "戻る"></p>
+  </form>
+
 </body>
 </html>

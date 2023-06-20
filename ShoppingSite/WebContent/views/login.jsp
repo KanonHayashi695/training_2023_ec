@@ -15,5 +15,9 @@
   <p><input type = "submit" value = "ログイン"></p>
   </form>
 
+  <form action = "logout2" method = "post">
+  <p><input type = "submit" value = "戻る"></p>
+  </form>
+
 </body>
 </html>
