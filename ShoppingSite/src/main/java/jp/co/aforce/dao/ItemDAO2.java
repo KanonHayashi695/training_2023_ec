@@ -192,5 +192,29 @@ public class ItemDAO2 extends Dao{
 		closeConnection(con);
 		return itemList;
 	}
-		
+		//全検索
+	public List<ItemBean> searchall() throws Exception {
+		List<ItemBean> itemList = new ArrayList<>();
+		Connection con = getConnection();
+		PreparedStatement st = con.prepareStatement(
+				"SELECT * FROM item_list");
+		ResultSet rs = st.executeQuery();
+		while (rs.next()) {
+			ItemBean item = new ItemBean();
+			item.setItem_id(rs.getInt("ITEM_ID"));
+			item.setItem_name(rs.getString("ITEM_NAME"));
+			item.setPrice(rs.getInt("PRICE"));
+			item.setCategory(rs.getString("CATEGORY"));
+			item.setRelease_year(rs.getInt("RELEASE_YEAR"));
+			item.setRelease_month(rs.getInt("RELEASE_MONTH"));
+			item.setRelease_day(rs.getInt("RELEASE_DAY"));
+			item.setLevel(rs.getString("LEVEL"));
+			item.setStock(rs.getInt("STOCK"));
+			itemList.add(item);
+		}
+		rs.close();
+		st.close();
+		closeConnection(con);
+		return itemList;
+	}
 }

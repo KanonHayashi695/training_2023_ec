@@ -21,17 +21,26 @@
    <p><input type = "submit" value = "戻る"></p>
   </form>
   
+   <p>価格</p>
+   <input type = "radio" name = "price" value = "0～999" checked>0～999
+   <input type ="radio" name = "price" value = "1000～4999">1000～4999
+   <input type ="radio" name = "price" value = "5000～9999">5000～9999
+   <input type ="radio" name = "price" value = "10000～">10000～
+   <input type ="radio" name = "price" value = "指定なし">指定なし
+  
    <p>漫才の分類</p>
    <input type = "radio" name = "classification" value = "漫才台本" checked>漫才台本
    <input type ="radio" name = "classification" value = "コント台本">コント台本
+   <input type ="radio" name = "classification" value = "ピンネタ台本">ピンネタ台本
    <input type = "radio" name = "classification" value = "一発ギャグ">一発ギャグ
    <input type = "radio" name = "classification" value = "エピソードトーク">エピソードトーク
    <input type = "radio" name = "classification" value = "舞台衣装">舞台衣装
    <input type = "radio" name = "classification" value = "その他">その他
    <input type = "radio" name = "classification" value = "指定なし">指定なし
    
-   
+   <form action = "searchall" method = "post">
     <p><input type = "submit" value = "すべて"></p>
+   </form> 
     
    <form action = "searchmanzai" method = "post">
    <input type="hidden" name="keyword" value="漫才台本">
@@ -43,10 +52,30 @@
     <p><input type = "submit" value = "コント台本"></p>
    </form>
    
-    <p><input type = "submit" value = "一発ギャグ"></p>
-    <p><input type = "submit" value = "エピソードトーク"></p>
+   <form action = "searchonly" method = "post">
+   <input type="hidden" name="keyword" value="ピンネタ台本">
+    <p><input type = "submit" value = "ピンネタ台本"></p>
+   </form>
+   
+   <form action = "searchgag" method = "post">
+   <input type="hidden" name="keyword" value="一発ギャグ台本"> 
+    <p><input type = "submit" value = "一発ギャグ台本"></p>
+   </form>
+   
+   <form action = "searchtalk" method = "post">
+   <input type="hidden" name="keyword" value="エピソードトーク台本">
+    <p><input type = "submit" value = "エピソードトーク台本"></p>
+   </form> 
+    
+   <form action = "searchcostume" method = "post">
+   <input type="hidden" name="keyword" value="舞台衣装"> 
     <p><input type = "submit" value = "舞台衣装"></p>
+   </form>
+   
+   <form action = "searchothers" method = "post">
+   <input type="hidden" name="keyword" value="その他"> 
     <p><input type = "submit" value = "その他"></p>
+   </form> 
     </div>
   
 <%@include file="../footer.jsp" %>
