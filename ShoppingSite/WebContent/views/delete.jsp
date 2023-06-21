@@ -4,7 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>DANRAKU_会員情報削除</title>
+<%@include file="../header_user.jsp" %>
+<link href="${pageContext.request.contextPath}/css/style.css?20230620" rel="stylesheet" media="all" type="text/css" />
+<link href="${pageContext.request.contextPath}/css/headerStyle_user.css?20230620" rel="stylesheet" media="all" type="text/css" />
 </head>
 <body>
    
@@ -52,7 +55,7 @@
     <input type = "text" disabled name = "mail_address" required = "required"></p>
     -->
    
-    
+   <div class="mainContent">
    <form action = "delete3" method = "post"> 
    
     
@@ -69,6 +72,6 @@
    <form action = "delete2" method = "post">
     <input type = "submit" value = "戻る"> 
    </form>
+   </div>
    
-</body>
-</html>
+<%@include file="../footer.jsp" %>

@@ -61,7 +61,6 @@ public class Search extends HttpServlet {
 			bean = memberDao.search(member_id, password);
 			if(bean != null) {
 				session.setAttribute("member", bean);
-//				session.setAttribute("member_id", member_id);
 				request.getRequestDispatcher("itemmenu.jsp").forward(request,response);
 			} else {
 				request.getRequestDispatcher("nologin.jsp").forward(request,response);			

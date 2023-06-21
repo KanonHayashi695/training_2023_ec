@@ -147,7 +147,7 @@ public class ItemDAO2 extends Dao{
 			int release_day = rs.getInt("release_day");
 			String level = rs.getString("level");
 			int stock = rs.getInt("stock");
-			item = new ItemBean(itemId, item_name, price, category, release_year, release_month, release_day, level, stock);
+			item = new ItemBean(itemId, item_name, price, category, release_year, release_month, release_day, level, stock, 0);
 		}
 		rs.close();
 		st.close();

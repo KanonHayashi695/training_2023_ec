@@ -4,14 +4,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>DANRAKU_ログアウト</title>
+<%@include file="../header.jsp" %>
+<link href="${pageContext.request.contextPath}/css/headerStyle.css?20230620" rel="stylesheet" media="all" type="text/css" />
+<link href="${pageContext.request.contextPath}/css/style.css?20230620" rel="stylesheet" media="all" type="text/css" />
 </head>
 <body>
-
-  <form action = "logout2" method = "post">
-   <p>ログアウトに成功しました。</p>
-   <p><input type = "submit" value = "戻る"></p>
-  </form>
-
-</body>
-</html>
+	<div class="mainContent">
+		<form action = "logout2" method = "post">
+			<p>ログアウトしました。</p>
+			<p><input type = "submit" value = "商品一覧ページに戻る"></p>
+		</form>
+	</div>
+<%@include file="../footer.jsp" %>
