@@ -18,6 +18,11 @@ header {
 	text-align: left;
 }
 
+.title2 a{
+	color: white;
+	text-decoration: none;
+}
+
 .title2 h1 {
 	font-size: 30px;
 	margin: 0;

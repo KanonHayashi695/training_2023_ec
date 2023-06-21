@@ -22,9 +22,5 @@
 			<p><input type = "submit" value = "カート画面に進む"></p>
 		</form>
 	
-		<form action = "logout" method = "post">
-			<p>ログアウトする</p>
-			<p><input type = "submit" value = "ログアウト"></p>
-		</form>
 	</div>
 <%@include file="../footer.jsp" %>
