@@ -37,6 +37,11 @@ header {
     color: #FFF;
 }
 
+.cartCount{
+	color: white;
+}
+
+/* フッター */
 
 footer{
 	background-color: #007DDD;
@@ -45,7 +50,6 @@ footer{
 	color: #FFF;
 }
 
-/* フッター */
 footer p{
 	margin: 0;
 }

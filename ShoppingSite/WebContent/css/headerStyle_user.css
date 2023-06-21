@@ -45,9 +45,13 @@ header {
 	margin-right: 10px;
 	
 }
-.actionButtons a, .button{
+.actionButtons a, .button, .cartCount{
 	display: inline-block;
 	margin-left: 10px;
+}
+
+.cartCount{
+	color: white;
 }
 
 .myPageButton img,
@@ -72,41 +76,31 @@ header {
 
 
 .hoverMenu {
-  position: relative;
-  display: inline-block;
+	position: relative;
+	display: inline-block;
 }
 .hoverMenu .menuContent {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  padding: 8px;
-  z-index: 1;
-  right: 0; /* 右端に寄せる */
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	padding: 8px;
+	z-index: 1;
+	right: 0;
 }
 .hoverMenu:hover .menuContent {
-  display: block;
+	display: block;
 }
 .hoverMenu .menuContent a {
-  color: #333;
-  text-decoration: none;
-  display: block;
-  padding: 8px 0;
+	color: #333;
+	text-decoration: none;
+	display: block;
+	padding: 8px 0;
 }
 .hoverMenu .menuContent a:hover {
-  background-color: #ddd;
+	background-color: #ddd;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 /* フッター */

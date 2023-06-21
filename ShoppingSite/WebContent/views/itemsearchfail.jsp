@@ -4,14 +4,16 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>DANRAKU_商品検索結果</title>
+<%@include file="../header_user.jsp" %>
+<link href="${pageContext.request.contextPath}/css/headerStyle_user.css?20230620" rel="stylesheet" media="all" type="text/css" />
+<link href="${pageContext.request.contextPath}/css/style.css?20230620" rel="stylesheet" media="all" type="text/css" />
 </head>
 <body>
-
+	<div class="cartContentNull">
    <p>該当する商品はありません。</p>
   <form action = "searchtransition" method = "post">
    <input type = "submit" value = "戻る">
   </form>
-  
-</body>
-</html>
+  </div>
+<%@include file="../footer.jsp" %>

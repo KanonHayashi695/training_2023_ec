@@ -4,10 +4,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>DANRAKU_検索結果</title>
+<%@include file="../header_user.jsp" %>
+<link href="${pageContext.request.contextPath}/css/headerStyle_user.css?20230620" rel="stylesheet" media="all" type="text/css" />
+<link href="${pageContext.request.contextPath}/css/style.css?20230620" rel="stylesheet" media="all" type="text/css" />
 </head>
 <body>
-   
+   <div class="cartContent">
    <%@page import = "jp.co.aforce.bean.ItemBean, java.util.List" %>
    <% List<ItemBean> list = (List<ItemBean>)session.getAttribute("list"); %>
    
@@ -29,5 +32,5 @@
          <form action = "carttransition" method = "post">
           <p><input type = "submit" value = "戻る"></p>
          </form>
-</body>
-</html>
+         </div>
+<%@include file="../footer.jsp" %>
