@@ -21,8 +21,10 @@
 	<% } %> 
 		<header>
 			<div class="title2">
-				<h1>DANRAKU</h1>
-				<h2>-台本販売サイト-</h2>
+				<a href="itemmenu.jsp">
+					<h1>DANRAKU</h1>
+					<h2>-台本販売サイト-</h2>
+				</a>
 			</div>
 			<div class="actionButtons">
 				<% if(session.getAttribute("member")!=null){ %>
