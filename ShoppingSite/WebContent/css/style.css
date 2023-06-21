@@ -43,3 +43,13 @@ main{
 .test{
 	margin: auto;
 }
+
+/*カートページ*/
+.cartContent, .cartContentNull{
+	margin: auto;
+	margin-left: 2%;
+}
+
+.cartContentNull{
+	margin-top: 2%;
+}
