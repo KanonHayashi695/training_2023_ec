@@ -18,16 +18,27 @@
    <% if(cart != null){ %> 
    <% for(ItemBean i : cart){ %> 
     
-    <p><%=i.getItem_name() %> : <%=i.getPrice() %></p>
-  
-    
+    <p><%=i.getItem_name() %> : <%=i.getPrice() %> : <%=i.getCount() %></p>
+   
+   <%  a += (i.getPrice() * i.getCount()) ; %> 
+   
+   <form action = "cartgetadd" method = "post">
+     <input type="hidden" name="item_name" value="<%=i.getItem_name() %>">
+     <input type="hidden" name="item_id" value="<%=i.getItem_id() %>">
+     <input type="hidden" name="price" value="<%=i.getPrice() %>">
+    <p><input type = "submit" value = "＋"></p>
+   </form>
+   
+    <form action = "cartgetreduce" method = "post">
+     <input type="hidden" name="item_name" value="<%=i.getItem_name() %>">
+     <input type="hidden" name="item_id" value="<%=i.getItem_id() %>">
+     <input type="hidden" name="price" value="<%=i.getPrice() %>">
+    <p><input type = "submit" value = "ー"></p>
+   </form>
+   
    <form action = "cartremoveaction" method = "post"> 
    <input type="hidden" name="item_id" value="<%=i.getItem_id() %>">
-   
-   <%  a += i.getPrice(); %>
-   
-    <p><input type = "submit" value = "カートから削除する"></p>
-  
+   <input type = "submit" value = "カートから削除する">
    </form>
     
    <% } %>

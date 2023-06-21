@@ -16,14 +16,14 @@ import jp.co.aforce.bean.ItemBean;
 /**
  * Servlet implementation class CartAdd
  */
-@WebServlet("/views/cartadd")
-public class CartAdd extends HttpServlet {
+@WebServlet("/views/cartgetreduce")
+public class CartGetReduce extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CartAdd() {
+    public CartGetReduce() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -65,7 +65,7 @@ public class CartAdd extends HttpServlet {
 			
 			System.out.println("商品を追加しました");
 			
-			request.getRequestDispatcher("itemsearchsuccess.jsp").forward(request,response);
+			request.getRequestDispatcher("cart-get.jsp").forward(request,response);
 		}else {
 			
 		
@@ -74,9 +74,13 @@ public class CartAdd extends HttpServlet {
 		for(ItemBean i : cart) {
 			if(i.getItem_name().equals(item_name)) {
 			n++;
-			i.setCount(i.getCount()+1);
+			if(i.getCount() > 1) {
+			i.setCount(i.getCount()-1);
 			break;
-			} 
+			}else {
+				break;
+			}
+			}
 		}
 		    if(n == 0) {
 		    ItemBean i = new ItemBean();
@@ -90,10 +94,10 @@ public class CartAdd extends HttpServlet {
 			
 			System.out.println("商品を追加しました");
 			
-			request.getRequestDispatcher("itemsearchsuccess.jsp").forward(request,response);
+			request.getRequestDispatcher("cart-get.jsp").forward(request,response);
 		    }else {
 		    	
-		    request.getRequestDispatcher("itemsearchsuccess.jsp").forward(request,response);
+		    request.getRequestDispatcher("cart-get.jsp").forward(request,response);
 		    	
 		    }
 		}

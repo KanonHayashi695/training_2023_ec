@@ -13,8 +13,9 @@ public class ItemBean implements Serializable{
 	private int release_day;
 	private String level;
 	private int stock;
+	private int count;
 		
-	public ItemBean(int item_id, String item_name, int price, String category, int release_year, int release_month, int release_day, String level, int stock) {
+	public ItemBean(int item_id, String item_name, int price, String category, int release_year, int release_month, int release_day, String level, int stock, int count) {
 		this.item_id = item_id;
 		this.item_name = item_name;
 		this.price = price;
@@ -24,6 +25,7 @@ public class ItemBean implements Serializable{
 		this.release_day = release_day;
 		this.level = level;
 		this.stock = stock;
+		this.count = count;
 	}
 
 	public int getItem_id() {
@@ -67,6 +69,9 @@ public class ItemBean implements Serializable{
 		return stock;
 	}
 	
+	public int getCount() {
+		return count;
+	}
 	public void setItem_id(int item_id) {
 		this.item_id = item_id;
 	}
@@ -101,6 +106,10 @@ public class ItemBean implements Serializable{
 	
 	public void setStock(int stock) {
 		this.stock = stock;
+	}
+
+	public void setCount(int count) {
+		this.count = count;
 	}
 
 }

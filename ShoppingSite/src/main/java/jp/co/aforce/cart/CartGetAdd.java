@@ -16,14 +16,14 @@ import jp.co.aforce.bean.ItemBean;
 /**
  * Servlet implementation class CartAdd
  */
-@WebServlet("/views/cartadd")
-public class CartAdd extends HttpServlet {
+@WebServlet("/views/cartgetadd")
+public class CartGetAdd extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CartAdd() {
+    public CartGetAdd() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -65,7 +65,7 @@ public class CartAdd extends HttpServlet {
 			
 			System.out.println("商品を追加しました");
 			
-			request.getRequestDispatcher("itemsearchsuccess.jsp").forward(request,response);
+			request.getRequestDispatcher("cart-get.jsp").forward(request,response);
 		}else {
 			
 		
@@ -90,10 +90,10 @@ public class CartAdd extends HttpServlet {
 			
 			System.out.println("商品を追加しました");
 			
-			request.getRequestDispatcher("itemsearchsuccess.jsp").forward(request,response);
+			request.getRequestDispatcher("cart-get.jsp").forward(request,response);
 		    }else {
 		    	
-		    request.getRequestDispatcher("itemsearchsuccess.jsp").forward(request,response);
+		    request.getRequestDispatcher("cart-get.jsp").forward(request,response);
 		    	
 		    }
 		}
