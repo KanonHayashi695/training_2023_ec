@@ -51,22 +51,72 @@ public class CategoryCartAdd extends HttpServlet {
 		HttpSession session = request.getSession();
 		
 		List<ItemBean> cart = (List<ItemBean>)session.getAttribute("cart");
-		if(cart == null) {
+		int n = 0;
+		
+		if(cart == null || cart.size() == 0) {
 			cart = new ArrayList<ItemBean>();
+			ItemBean i = new ItemBean();
+			i.setItem_name(item_name);
+			i.setPrice(price);
+			i.setItem_id(item_id);
+			i.setCount(1);
+			cart.add(i);	
+			session.setAttribute("cart", cart);
+			
+			System.out.println("商品を追加しました");
+			
+			request.getRequestDispatcher("searchcategory.jsp").forward(request,response);
+		}else {
+			
+		
+		
+	
+		for(ItemBean i : cart) {
+			if(i.getItem_name().equals(item_name)) {
+			n++;
+			i.setCount(i.getCount()+1);
+			break;
+			} 
+		}
+		    if(n == 0) {
+		    ItemBean i = new ItemBean();
+		
+			i.setItem_name(item_name);
+			i.setPrice(price);
+			i.setItem_id(item_id);
+			i.setCount(1);
+			cart.add(i);	
+			session.setAttribute("cart", cart);
+			
+			System.out.println("商品を追加しました");
+			
+			request.getRequestDispatcher("searchcategory.jsp").forward(request,response);
+		    }else {
+		    	
+		    request.getRequestDispatcher("searchcategory.jsp").forward(request,response);
+		    	
+		    }
 		}
 		
-		ItemBean i = new ItemBean();
-		i.setItem_name(item_name);
-		i.setPrice(price);
-		i.setItem_id(item_id);
-		cart.add(i);
-		
-		
-		session.setAttribute("cart", cart);
-		
-		System.out.println("商品を追加しました");
-		
-		request.getRequestDispatcher("searchcategory.jsp").forward(request,response);
 	}
-
-}
+	}
+//		List<ItemBean> cart = (List<ItemBean>)session.getAttribute("cart");
+//		if(cart == null) {
+//			cart = new ArrayList<ItemBean>();
+//		}
+//		
+//		ItemBean i = new ItemBean();
+//		i.setItem_name(item_name);
+//		i.setPrice(price);
+//		i.setItem_id(item_id);
+//		cart.add(i);
+//		
+//		
+//		session.setAttribute("cart", cart);
+//		
+//		System.out.println("商品を追加しました");
+//		
+//		request.getRequestDispatcher("searchcategory.jsp").forward(request,response);
+//	}
+//
+//}
