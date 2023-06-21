@@ -5,10 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>DANRAKU_新規会員登録</title>
+<%@include file="../header.jsp" %>
+<link href="${pageContext.request.contextPath}/css/style.css?20230620" rel="stylesheet" media="all" type="text/css" />
+<link href="${pageContext.request.contextPath}/css/headerStyle.css?20230620" rel="stylesheet" media="all" type="text/css" />
 </head>
 <body>
    
    <!-- 登録画面作成 -->
+   <div class="mainContent">
    <form action = "registservlet" method = "post">
      <p>会員情報登録</p>
      <p>ID</p>
@@ -63,6 +67,6 @@
    <form action = "login3" method = "post">
     <input type = "submit" value = "戻る"> 
    </form>
+   </div>
    
-</body>
-</html>
+<%@include file="../footer.jsp" %>

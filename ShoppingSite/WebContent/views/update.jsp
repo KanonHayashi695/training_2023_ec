@@ -4,11 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>DANRAKU_会員情報変更</title>
+<%@include file="../header_user.jsp" %>
+<link href="${pageContext.request.contextPath}/css/style.css?20230620" rel="stylesheet" media="all" type="text/css" />
+<link href="${pageContext.request.contextPath}/css/headerStyle_user.css?20230620" rel="stylesheet" media="all" type="text/css" />
 </head>
 <body>
    
    <!-- 登録更新画面作成 -->
+   <div class="mainContent">
    <form action = "update3" method = "post">
      <p>会員情報登録</p>
      <p>ID</p>
@@ -64,6 +68,6 @@
    <form action = "update" method = "post">
     <input type = "submit" value = "戻る"> 
    </form>
+   </div>
    
-</body>
-</html>
+<%@include file="../footer.jsp" %>

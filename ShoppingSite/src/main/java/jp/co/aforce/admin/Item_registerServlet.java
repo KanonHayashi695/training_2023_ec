@@ -66,7 +66,7 @@ public class Item_registerServlet extends HttpServlet {
 		}
 		
 		//商品情報の登録
-		ItemBean item = new ItemBean(itemId, itemName, price, category, releaseYear, releaseMonth, releaseDay, level, stock);
+		ItemBean item = new ItemBean(itemId, itemName, price, category, releaseYear, releaseMonth, releaseDay, level, stock, 0);
 		boolean success = false;
 		try {
 			success = itemDAO2.registerItem(item);
