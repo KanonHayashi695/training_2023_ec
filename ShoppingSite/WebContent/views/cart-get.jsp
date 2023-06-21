@@ -17,7 +17,7 @@
     
    <% if(cart != null){ %> 
    <% for(ItemBean i : cart){ %> 
-    
+     <img src="../img/<%=i.getItem_id() %>.jpg" height ="96">
     <p><%=i.getItem_name() %> : <%=i.getPrice() %> : <%=i.getCount() %></p>
    
    <%  a += (i.getPrice() * i.getCount()) ; %> 
