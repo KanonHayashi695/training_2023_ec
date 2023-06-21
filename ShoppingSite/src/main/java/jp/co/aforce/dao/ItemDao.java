@@ -23,6 +23,7 @@ public class ItemDao extends Dao{
 			
 		while(rs.next()) {
 			ItemBean i = new ItemBean();
+			i.setItem_id(rs.getInt("item_id"));
 			i.setItem_name(rs.getString("item_name"));
 			i.setPrice(rs.getInt("price"));
 			i.setCategory(rs.getString("category"));

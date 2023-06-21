@@ -13,7 +13,7 @@
    
    <% if(list != null){ %>
    <% for(ItemBean i : list){ %>
-   
+   		<img src="../img/<%=i.getItem_id() %>.jpg" height ="96">
          <%=i.getItem_name() %> : <%=i.getPrice() %> : <%=i.getCategory() %> : 
          <%=i.getRelease_year() %> : <%=i.getRelease_month() %> : 
          <%=i.getRelease_day() %> : <%=i.getLevel() %> : <%=i.getStock() %>
