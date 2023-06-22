@@ -32,6 +32,6 @@
           <p><input type = "submit" value = "戻る"></p>
          </form>
          </div>
-<%@include file="../header_user.jsp" %>         
+<script src="../js/sample_javascript.js"></script>        
 </body>
 <%@include file="../footer.jsp" %>

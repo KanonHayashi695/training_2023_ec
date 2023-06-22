@@ -4,7 +4,7 @@
 <html>
 <meta charset="UTF-8">
 <title>DANRAKU_検索結果</title>
-
+<%@include file="../header_user.jsp" %>
 <link href="${pageContext.request.contextPath}/css/headerStyle_user.css?20230620" rel="stylesheet" media="all" type="text/css" />
 <link href="${pageContext.request.contextPath}/css/style.css?20230620" rel="stylesheet" media="all" type="text/css" />
 </head>
@@ -38,6 +38,6 @@
          </form>
          
  </div>
-<%@include file="../header_user.jsp" %>
+<script src="../js/sample_javascript.js"></script>
  </body>
 <%@include file="../footer.jsp" %>
