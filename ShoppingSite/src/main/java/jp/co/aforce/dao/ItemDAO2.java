@@ -165,6 +165,7 @@ public class ItemDAO2 extends Dao{
 		closeConnection(con);
 		return i > 0;
 	}
+	
 	//ジャンル絞る
 	public List<ItemBean> searchCategory(String category) throws Exception {
 		List<ItemBean> itemList = new ArrayList<>();
@@ -191,7 +192,8 @@ public class ItemDAO2 extends Dao{
 		closeConnection(con);
 		return itemList;
 	}
-		//全検索
+	
+	//全検索
 	public List<ItemBean> searchall() throws Exception {
 		List<ItemBean> itemList = new ArrayList<>();
 		Connection con = getConnection();
@@ -216,6 +218,7 @@ public class ItemDAO2 extends Dao{
 		closeConnection(con);
 		return itemList;
 	}
+	
 	//価格絞り込み
 	public List<ItemBean> searchPrice(int pricemin, int pricemax) throws Exception {
 		List<ItemBean> itemList = new ArrayList<>();

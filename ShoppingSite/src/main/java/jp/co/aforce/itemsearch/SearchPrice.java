@@ -66,4 +66,4 @@ public class SearchPrice extends HttpServlet {
 		
 	}
 
-	}
+}
