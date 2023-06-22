@@ -22,13 +22,34 @@
   </form>
   
    <p>価格</p>
-   <input type = "radio" name = "price" value = "0～999" checked>0～999
-   <input type ="radio" name = "price" value = "1000～4999">1000～4999
-   <input type ="radio" name = "price" value = "5000～9999">5000～9999
-   <input type ="radio" name = "price" value = "10000～">10000～
-   <input type ="radio" name = "price" value = "指定なし">指定なし
+   <form action = "searchprice" method = "post">
+    <input type="hidden" name="pricemin" value="0">
+    <input type="hidden" name="pricemax" value="999">
+    <p><input type = "submit" value = "0-999"></p>
+   </form>
+   
+   <form action = "searchprice" method = "post">
+    <input type="hidden" name="pricemin" value="1000">
+    <input type="hidden" name="pricemax" value="4999">
+    <p><input type = "submit" value = "1000-4999"></p>
+   </form>
+   
+   <form action = "searchprice" method = "post">
+    <input type="hidden" name="pricemin" value="5000">
+    <input type="hidden" name="pricemax" value="9999">
+    <p><input type = "submit" value = "5000-9999"></p>
+   </form>
+   
+   <form action = "searchprice" method = "post">
+    <input type="hidden" name="pricemin" value="10000">
+    <input type="hidden" name="pricemax" value="100000">
+    <p><input type = "submit" value = "10000-100000"></p>
+   </form>
+   
+   <p><input type = "submit" value = "検索"></p>
+   
   
-   <p>漫才の分類</p>
+   <!--  <p>漫才の分類</p>
    <input type = "radio" name = "classification" value = "漫才台本" checked>漫才台本
    <input type ="radio" name = "classification" value = "コント台本">コント台本
    <input type ="radio" name = "classification" value = "ピンネタ台本">ピンネタ台本
@@ -37,6 +58,7 @@
    <input type = "radio" name = "classification" value = "舞台衣装">舞台衣装
    <input type = "radio" name = "classification" value = "その他">その他
    <input type = "radio" name = "classification" value = "指定なし">指定なし
+   -->
    
    <form action = "searchall" method = "post">
     <p><input type = "submit" value = "すべて"></p>
