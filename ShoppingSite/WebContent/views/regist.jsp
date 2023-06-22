@@ -10,9 +10,9 @@
 <link href="${pageContext.request.contextPath}/css/headerStyle.css?20230620" rel="stylesheet" media="all" type="text/css" />
 </head>
 <body>
-   
-   <!-- 登録画面作成 -->
-   <div class="mainContent">
+		   
+	<!-- 登録画面作成 -->
+	<div class="mainContent">
    <form action = "registservlet" method = "post">
      <p>会員情報登録</p>
      <p>ID</p>
@@ -43,7 +43,7 @@
     <select name="birth_day" required = "required">
       <c:forEach var = "i" begin = "1" end = "31">
        <option value = "${i}">${i} </option>
-      </c:forEach></select>　日
+      </c:forEach></select>日
      </p>
      
      <p>職業<br>
@@ -62,11 +62,15 @@
     <input type = "text" name = "mail_address" required = "required"></p>
 
     <input type = "submit" value = "登録">
-    </form>
-    
-   <form action = "login3" method = "post">
-    <input type = "submit" value = "戻る"> 
+
+    <button type="buttun" onclick="goBack()">戻る</button> 
    </form>
    </div>
+	<script>
+		<!-- 戻るボタンがrequiredを無視 -->
+		function goBack(){
+			window.history.back();
+		}
+	</script>
    
 <%@include file="../footer.jsp" %>

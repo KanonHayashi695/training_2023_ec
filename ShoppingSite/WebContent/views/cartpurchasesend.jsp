@@ -12,5 +12,8 @@
 <body>
 	<div class="mainContent">
 		<p>お買い上げありがとうございました。</p>
+		<form action = "itemmenu.jsp" method = "post">
+			<p><input type = "submit" value = "ホームに戻る"></p>
+		</form>
 	</div>
 <%@include file="../footer.jsp" %>

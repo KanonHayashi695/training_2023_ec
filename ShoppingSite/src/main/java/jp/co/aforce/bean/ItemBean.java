@@ -112,4 +112,9 @@ public class ItemBean implements Serializable{
 		this.count = count;
 	}
 
+	public int getTotal_price() {
+		// TODO 自動生成されたメソッド・スタブ
+		return price * count;
+	}
+
 }
