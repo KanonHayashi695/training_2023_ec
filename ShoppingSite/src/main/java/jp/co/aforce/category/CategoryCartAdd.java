@@ -95,6 +95,7 @@ public class CategoryCartAdd extends HttpServlet {
 			i.setItem_name(item_name);
 			i.setPrice(price);
 			i.setItem_id(item_id);
+			i.setStock(stock);
 			i.setCount(1);
 			cart.add(i);	
 			session.setAttribute("cart", cart);
