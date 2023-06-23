@@ -36,7 +36,7 @@
          
    <% } %>
    <% } %>
-         <form action = "carttransition" method = "post">
+         <form action = "itemtransition" method = "post">
           <p><input type = "submit" value = "戻る"></p>
          </form>
          

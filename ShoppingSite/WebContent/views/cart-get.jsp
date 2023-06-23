@@ -55,11 +55,18 @@
 	    <p><input type = "submit" value = "購入"></p>
 	    </form>
 	    
-	   <form action = "carttransition" method = "post"> 
-	    <p><input type = "submit" value = "戻る"></p>
-           </form>
+		<div>
+			<p><button type="button" onclick="goBack()" class="Button">戻る</button></p>
+		</div>
 </div>
-<script src="../js/sample_javascript.js"></script>
+<script src="../js/sample_javascript.js">
+</script>
+	<script>
+		<!-- 戻るボタンの挙動 -->
+		function goBack(){
+			window.history.back();
+		}
+	</script>
 </body>       
 <%@include file="../footer.jsp" %>
 </html>

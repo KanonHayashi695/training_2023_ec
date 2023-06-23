@@ -3,6 +3,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="jp.co.aforce.bean.MemberBean" %>
 <%@page import = "jp.co.aforce.bean.ItemBean, java.util.List" %>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,7 +23,7 @@
 	<% } %> 
 		<header>
 			<div class="title2">
-				<a href="itemmenu.jsp">
+				<a href="itemsearch.jsp">
 					<h1>DANRAKU</h1>
 					<h2>-台本販売サイト-</h2>
 				</a>

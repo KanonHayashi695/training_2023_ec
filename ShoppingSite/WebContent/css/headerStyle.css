@@ -4,6 +4,10 @@
 margin:0; padding:0;
 }
 
+h1{
+	font-family: 'Permanent Marker', cursive;
+}
+
 /* ヘッダー */
 header {
 	background-color: #007DDD;
