@@ -5,18 +5,19 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<%@include file="../header_user.jsp" %>
+<%@include file="../../header_user.jsp" %>
 <link href="${pageContext.request.contextPath}/css/headerStyle_user.css?20230620" rel="stylesheet" media="all" type="text/css" />
 <link href="${pageContext.request.contextPath}/css/style.css?20230620" rel="stylesheet" media="all" type="text/css" />
+<link href="${pageContext.request.contextPath}/css/itemdetail.css?20230623" rel="stylesheet" media="all" type="text/css" />
 </head>
 <body>
    
    <%@page import = "jp.co.aforce.bean.ItemBean, java.util.List" %>
    <% List<ItemBean> list = (List<ItemBean>)session.getAttribute("list"); %>
 
-   <h1>コンビニの定員</h1>
-   <img src="../img/1.jpg" height ="370" width="600">
-   
+   <h1 class = "logo">コンビニの定員</h1>
+   <h2 class = "logo2">1200円</h2>
+   <img src="../../img/1.jpg" height ="315" width="600">
    
    <% if(list != null){ %>
    <% for(ItemBean i : list){ %>
@@ -39,5 +40,5 @@
   </form>
          
 </body>
-<%@include file="../footer.jsp" %>
+<%@include file="../../footer.jsp" %>
 </html>
