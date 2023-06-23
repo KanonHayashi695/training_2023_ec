@@ -3,7 +3,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="jp.co.aforce.bean.MemberBean" %>
 <%@page import = "jp.co.aforce.bean.ItemBean, java.util.List" %>
-
 <!DOCTYPE html>
 <html>
 <head>

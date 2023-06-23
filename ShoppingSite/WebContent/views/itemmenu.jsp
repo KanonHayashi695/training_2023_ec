@@ -23,4 +23,6 @@
 		</form>
 	
 	</div>
+<script src="../js/sample_javascript.js"></script>
+</body>
 <%@include file="../footer.jsp" %>
