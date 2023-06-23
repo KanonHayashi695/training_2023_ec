@@ -3,7 +3,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="jp.co.aforce.bean.MemberBean" %>
 <%@page import = "jp.co.aforce.bean.ItemBean, java.util.List" %>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +11,6 @@
 <title>header_user</title>
 </head>
 	<body>
-	
 	<% List<ItemBean> cart2 = (List<ItemBean>)session.getAttribute("cart"); %>
 	<% int cartCount = 0; %>
 	<% if(cart2 != null){ %> 
@@ -50,6 +48,5 @@
 					<div class="cartCount"><%=cartCount %></div>
 				</a>
 		</header>
-	
 	</body>
 </html>
