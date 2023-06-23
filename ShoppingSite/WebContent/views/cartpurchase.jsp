@@ -17,7 +17,7 @@
    <% if(cart != null){ %> 
    <% for(ItemBean i : cart){ %> 
     
-    <p><%=i.getItem_name() %> : <%=i.getPrice() %>円</p>
+    <p><%=i.getItem_name() %> : <%=i.getPrice() %>円：<%=i.getCount() %>個</p>
   
    <% } %>
    <% } %> 

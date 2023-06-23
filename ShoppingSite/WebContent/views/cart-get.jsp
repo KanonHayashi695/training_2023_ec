@@ -31,7 +31,9 @@
 	     <input type="hidden" name="stock" value="<%=i.getStock() %>">
 	    <p><input type = "submit" value = "＋"></p>
 	   </form>
-	   
+	    <% if( i.getStock() == i.getCount()){ %>
+	    <p>※購入上限です</p>
+	    <%} %>
 	    <form action = "cartgetreduce" method = "post">
 	     <input type="hidden" name="item_name" value="<%=i.getItem_name() %>">
 	     <input type="hidden" name="item_id" value="<%=i.getItem_id() %>">

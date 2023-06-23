@@ -49,11 +49,11 @@ public class CartGetAdd extends HttpServlet {
 		int item_id = Integer.parseInt(request.getParameter("item_id"));
 		int stock = Integer.parseInt(request.getParameter("stock"));
 		
+		System.out.println(stock);
 		HttpSession session = request.getSession();
 		
 		List<ItemBean> cart = (List<ItemBean>)session.getAttribute("cart");
 		int n = 0;
-		
 		if(cart == null || cart.size() == 0) {
 			cart = new ArrayList<ItemBean>();
 			ItemBean i = new ItemBean();
@@ -76,11 +76,15 @@ public class CartGetAdd extends HttpServlet {
 		for(ItemBean i : cart) {
 			if(i.getItem_name().equals(item_name)) {
 			n++;
-			if(i.getCount() < i.getStock()){
+			if(i.getCount() < stock){
+			i.setItem_name(item_name);
+			i.setPrice(price);
+			i.setItem_id(item_id);
+			i.setStock(stock);
 			i.setCount(i.getCount()+1);
+			System.out.println("個数を追加しました");
 			break;
 			}else {
-//			request.setAttribute("max", "購入数上限です");
 			 break;
 			 }
 			}
@@ -100,7 +104,7 @@ public class CartGetAdd extends HttpServlet {
 			
 			request.getRequestDispatcher("cart-get.jsp").forward(request,response);
 		    }else {
-		    	
+		    session.setAttribute("cart", cart);	
 		    request.getRequestDispatcher("cart-get.jsp").forward(request,response);
 		    	
 		    }

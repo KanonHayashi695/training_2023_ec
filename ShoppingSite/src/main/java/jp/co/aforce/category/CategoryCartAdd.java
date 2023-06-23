@@ -47,7 +47,8 @@ public class CategoryCartAdd extends HttpServlet {
 		String item_name = request.getParameter("item_name");
 		int price = Integer.parseInt(request.getParameter("price"));
 		int item_id = Integer.parseInt(request.getParameter("item_id"));
-		
+		int stock = Integer.parseInt(request.getParameter("stock"));
+		System.out.println(stock);
 		HttpSession session = request.getSession();
 		
 		List<ItemBean> cart = (List<ItemBean>)session.getAttribute("cart");
@@ -59,6 +60,7 @@ public class CategoryCartAdd extends HttpServlet {
 			i.setItem_name(item_name);
 			i.setPrice(price);
 			i.setItem_id(item_id);
+			i.setStock(stock);
 			i.setCount(1);
 			cart.add(i);	
 			session.setAttribute("cart", cart);
@@ -74,10 +76,19 @@ public class CategoryCartAdd extends HttpServlet {
 		for(ItemBean i : cart) {
 			if(i.getItem_name().equals(item_name)) {
 			n++;
+			if(i.getCount() < stock){
+			i.setItem_name(item_name);
+			i.setPrice(price);
+			i.setItem_id(item_id);
+			i.setStock(stock);
 			i.setCount(i.getCount()+1);
 			break;
+				}else {
+					break;
+				}
 			} 
 		}
+		
 		    if(n == 0) {
 		    ItemBean i = new ItemBean();
 		
@@ -92,14 +103,14 @@ public class CategoryCartAdd extends HttpServlet {
 			
 			request.getRequestDispatcher("searchcategory.jsp").forward(request,response);
 		    }else {
-		    	
+		    session.setAttribute("cart", cart);	
 		    request.getRequestDispatcher("searchcategory.jsp").forward(request,response);
 		    	
 		    }
 		}
 		
 	}
-	}
+}
 //		List<ItemBean> cart = (List<ItemBean>)session.getAttribute("cart");
 //		if(cart == null) {
 //			cart = new ArrayList<ItemBean>();

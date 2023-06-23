@@ -2,12 +2,14 @@ package jp.co.aforce.cart;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
 import jp.co.aforce.bean.ItemBean;
 /**
  * Servlet implementation class CartAdd
@@ -44,7 +46,8 @@ public class CartAdd extends HttpServlet {
 		int price = Integer.parseInt(request.getParameter("price"));
 		int item_id = Integer.parseInt(request.getParameter("item_id"));
 		int stock = Integer.parseInt(request.getParameter("stock"));
-		
+		System.out.println(stock);
+
 		HttpSession session = request.getSession();
 		
 		List<ItemBean> cart = (List<ItemBean>)session.getAttribute("cart");
@@ -59,13 +62,17 @@ public class CartAdd extends HttpServlet {
 			i.setCount(1);
 			cart.add(i);	
 			session.setAttribute("cart", cart);
-			System.out.println("商品を追加しました");
+			System.out.println(stock);
 			request.getRequestDispatcher("itemsearchsuccess.jsp").forward(request,response);
 		}else {
 		for(ItemBean i : cart) {
 			if(i.getItem_name().equals(item_name)) {
 			n++;
-			if(i.getCount() < i.getStock()){
+			if(i.getCount() < stock){
+			i.setItem_name(item_name);
+			i.setPrice(price);
+			i.setItem_id(item_id);
+			i.setStock(stock);
 			i.setCount(i.getCount()+1);
 			break;
 			}else {
@@ -85,6 +92,7 @@ public class CartAdd extends HttpServlet {
 			System.out.println("商品を追加しました");
 			request.getRequestDispatcher("itemsearchsuccess.jsp").forward(request,response);
 		    }else {
+		    session.setAttribute("cart", cart);
 		    request.getRequestDispatcher("itemsearchsuccess.jsp").forward(request,response);
 		    }
 		}

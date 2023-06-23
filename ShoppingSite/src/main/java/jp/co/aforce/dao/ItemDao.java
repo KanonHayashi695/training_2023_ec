@@ -20,7 +20,6 @@ public class ItemDao extends Dao{
 		st.setString(1, "%"+keyword+"%");
 		ResultSet rs = st.executeQuery();
 		
-			
 		while(rs.next()) {
 			ItemBean i = new ItemBean();
 			i.setItem_id(rs.getInt("item_id"));
@@ -39,12 +38,20 @@ public class ItemDao extends Dao{
 		if(n == 0) {
 			list = null;
 		}
-		
 		st.close();
 		con.close();
-
-		
 		return list;
 	}
-		
+public int updateStock(int id, int count, int stock) throws Exception {
+		Connection con = getConnection();
+		PreparedStatement st = con.prepareStatement(
+				"UPDATE ITEM_LIST SET STOCK=? WHERE ITEM_ID=?"
+				);
+		st.setInt(1, stock - count);
+		st.setInt(2, id);
+		int line = st.executeUpdate();
+		st.close();
+		closeConnection(con);		
+		return line;
+	}
 }

@@ -39,13 +39,12 @@
          <input type="hidden" name="stock" value="<%=i.getStock() %>">
          <input type = "submit" value = "カートに入れる"><br>
          </form>
-         
+	    <%} %>         
    <% } %>
    <% } %>
          <form action = "itemtransition" method = "post">
           <p><input type = "submit" value = "戻る"></p>
-         </form>
-         
+         </form>  
  </div>
 <script src="../js/sample_javascript.js"></script>
  </body>
