@@ -73,7 +73,7 @@
 		<!-- ボタン -->
 		<input type="submit" value="登録">
 		<input type="reset" value="リセット">
-		<button type="buttun" onclick="goBack()">戻る</button>
+		<button type="button" onclick="goBack()">戻る</button>
 	</form>
 	
 	<script>
