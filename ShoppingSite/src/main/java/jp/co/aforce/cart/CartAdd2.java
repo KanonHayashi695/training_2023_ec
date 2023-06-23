@@ -77,12 +77,18 @@ public class CartAdd2 extends HttpServlet {
 			if(i.getItem_name().equals(item_name)) {
 			n++;
 			if(i.getCount() < i.getStock()){
+				if(i.getCount() < stock){
+			i.setItem_name(item_name);
+			i.setPrice(price);
+			i.setItem_id(item_id);
+			i.setStock(stock);
 			i.setCount(i.getCount()+1);
 			break;
 			} else {
 				break;
 			}
 		 }
+		}
 		}
 		    if(n == 0) {
 		    ItemBean i = new ItemBean();
@@ -99,7 +105,7 @@ public class CartAdd2 extends HttpServlet {
 			
 			request.getRequestDispatcher("searchprice.jsp").forward(request,response);
 		    }else {
-		    	
+		    session.setAttribute("cart", cart);	
 		    request.getRequestDispatcher("searchprice.jsp").forward(request,response);
 		    	
 		    }

@@ -14,6 +14,7 @@ import jp.co.aforce.bean.HistoryBean;
 import jp.co.aforce.bean.ItemBean;
 import jp.co.aforce.bean.MemberBean;
 import jp.co.aforce.dao.HistoryDAO;
+import jp.co.aforce.dao.ItemDao;
 /**
  * Servlet implementation class CartPurchaseTransition2
  */
@@ -69,6 +70,20 @@ public class CartPurchaseTransition2 extends HttpServlet {
 					p.setCount(count);
 					p.setTotal_price(totalPrice);
 					historyDAO.insert(p, cartItems);
+				}
+			//ストック減らす処理
+				for(ItemBean i : cartItems) {
+					int itemId = i.getItem_id();
+					int count = i.getCount();
+					int stock = i.getStock();
+					
+				ItemDao dao = new ItemDao();
+				int line = dao.updateStock(itemId, count, stock);
+				if(line > 0) {
+				System.out.println("在庫管理に成功しました");
+				}else {
+				System.out.println("在庫管理に失敗しました");
+				}
 				}
 				//カートの中身を全て削除
 				HttpSession session = request.getSession();
