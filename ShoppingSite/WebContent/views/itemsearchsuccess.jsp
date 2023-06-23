@@ -21,7 +21,7 @@
    <% if(list != null){ %>
    <% for(ItemBean i : list){ %>
    		<img src="../img/<%=i.getItem_id() %>.jpg" height ="96">
-   		<a href="http://localhost:8080/ShoppingSite/views/<%=i.getItem_id() %>.jsp">
+   		<a href="http://localhost:8080/ShoppingSite/views/itemdetail/<%=i.getItem_id() %>.jsp">
          <%=i.getItem_name() %></a> : 
          <%=i.getPrice() %> : 
          <%=i.getCategory() %> : 
@@ -39,7 +39,7 @@
          <input type="hidden" name="stock" value="<%=i.getStock() %>">
          <input type = "submit" value = "カートに入れる"><br>
          </form>
-	    <%} %>         
+	            
    <% } %>
    <% } %>
          <form action = "itemtransition" method = "post">
