@@ -12,7 +12,7 @@
 <body>
 	<div class="cartContentNull">
    <p>該当する商品はありません。</p>
-  <form action = "searchtransition" method = "post">
+  <form action = "itemtransition" method = "post">
    <input type = "submit" value = "戻る">
   </form>
   </div>

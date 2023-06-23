@@ -34,7 +34,7 @@ form p input[type="password"] {
 	border-radius: 4px;
 }
 
-form p input[type="submit"] {
+form p input[type="submit"] ,.underButton{
 	background-color: #007DDD;
 	color: #fff;
 	padding: 10px 20px;
@@ -64,7 +64,9 @@ form p input[type="submit"]:hover {
 .loginButton .button input[type="submit"]:hover {
 	background-color: red;
 }
-
+.underButton:hover {
+	background-color: red;
+}
 
 
 

@@ -38,7 +38,7 @@ public class CartTransition extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	//	doGet(request, response);
-		request.getRequestDispatcher("itemmenu.jsp").forward(request,response);
+		request.getRequestDispatcher("itemsearch.jsp").forward(request,response);
 	}
 
 }

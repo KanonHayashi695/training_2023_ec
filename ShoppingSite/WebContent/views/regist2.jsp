@@ -10,7 +10,7 @@
 
    <p>登録できました。</p>
   <form action = "login3" method = "post">
-   <p><input type = "submit" value = "戻る"></p> 
+   <p><input type = "submit" value = "次へ"></p> 
   </form>
    
 

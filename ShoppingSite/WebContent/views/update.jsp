@@ -65,9 +65,16 @@
     <input type = "submit" value = "更新">
    </form>
     
-   <form action = "update" method = "post">
-    <input type = "submit" value = "戻る"> 
-   </form>
+		<div>
+			<p><button type="button" onclick="goBack()" class="Button">戻る</button></p>
+		</div>
    </div>
+   
+	<script>
+		<!-- 戻るボタンの挙動 -->
+		function goBack(){
+			window.history.back();
+		}
+	</script>
    
 <%@include file="../footer.jsp" %>

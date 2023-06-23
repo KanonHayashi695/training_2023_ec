@@ -19,9 +19,9 @@
 			<p class="idp">■パスワード<input type = "password" name = "password" required = "required"></p>
 			<p><input type = "submit" value = "ログイン"></p>
 		</form>
-	<form action = "logout2" method = "post">
-		<p><input type = "submit" value = "戻る"></p>
-	</form>
+		<div class="back">
+			<p class="button"><button type="button" onclick="goBack()" class="underButton">戻る</button></p>
+		</div>
 		<div class="loginButton">
 			<form action = "login2" method = "post">
 			<p>初めての方はこちら</p>
@@ -29,4 +29,10 @@
 			</form>
 		</div>
 	</div>
+<script>
+		<!-- 戻るボタンがrequiredを無視 -->
+		function goBack(){
+			window.history.back();
+		}
+	</script>
 <%@include file="../footer.jsp" %>
