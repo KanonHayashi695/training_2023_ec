@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
-h1{
-  text-align: right;
+.logo{
+  text-align: center;
+}
+
+.logo2{
+  margin: 20px 150px 3px 50px ;
 }
