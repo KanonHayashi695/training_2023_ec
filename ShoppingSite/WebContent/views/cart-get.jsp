@@ -50,6 +50,14 @@
 	 
 	   <p>合計：<%=a %>	</p>    
 	    
+	   <p>購入方法</p>
+      <select name="purchasemethod" required = "required">
+        <option value="">※選択してください</option>
+        <option value="カード">カード</option>
+        <option value="代金引換">代金引換</option>
+        <option value="銀行振込">銀行振込</option>
+        <option value="コンビニ">コンビニ</option>
+      </select></p> 
 	
 	   <form action = "cartpurchasetransition" method = "post">
 	    <p><input type = "submit" value = "購入"></p>

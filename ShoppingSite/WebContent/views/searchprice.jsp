@@ -18,9 +18,15 @@
     <% if(price != null){ %>
     <% for(ItemBean i : price){ %>
          <img src="../img/<%=i.getItem_id() %>.jpg" height ="96">
-         <%=i.getItem_name() %> : <%=i.getPrice() %> : <%=i.getCategory() %> : 
-         <%=i.getRelease_year() %> : <%=i.getRelease_month() %> : 
-         <%=i.getRelease_day() %> : <%=i.getLevel() %> : <%=i.getStock() %><br> 
+         <a href="http://localhost:8080/ShoppingSite/views/<%=i.getItem_id() %>.jsp">
+         <%=i.getItem_name() %></a> : 
+         <%=i.getPrice() %> : 
+         <%=i.getCategory() %> : 
+         <%=i.getRelease_year() %> : 
+         <%=i.getRelease_month() %> : 
+         <%=i.getRelease_day() %> : 
+         <%=i.getLevel() %> : 
+         <%=i.getStock() %><br> 
          <form action = "cartadd2" method = "post">
          <input type="hidden" name="item_name" value="<%=i.getItem_name() %>">
          <input type="hidden" name="item_id" value="<%=i.getItem_id() %>">
