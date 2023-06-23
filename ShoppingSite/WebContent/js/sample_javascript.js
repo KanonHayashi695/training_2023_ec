@@ -26,4 +26,11 @@ window.addEventListener("load", function(){
 
 	// スクロール時のイベント設定
 	window.addEventListener("scroll", checkOffset, false);
+	cartContent.style.visibility ="visible";
+	headerview.style.visibility ="visible";
+	//cartContent.style.visibility ="visible";
 });
+
+//document.addEventListener('DOMContentLoaded', function() {
+//	cartContent.style.visibility ="visible";
+//});

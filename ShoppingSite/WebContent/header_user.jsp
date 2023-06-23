@@ -12,6 +12,7 @@
 <title>header_user</title>
 </head>
 	<body>
+	
 	<% List<ItemBean> cart2 = (List<ItemBean>)session.getAttribute("cart"); %>
 	<% int cartCount = 0; %>
 	<% if(cart2 != null){ %> 
@@ -49,5 +50,6 @@
 					<div class="cartCount"><%=cartCount %></div>
 				</a>
 		</header>
+	
 	</body>
 </html>

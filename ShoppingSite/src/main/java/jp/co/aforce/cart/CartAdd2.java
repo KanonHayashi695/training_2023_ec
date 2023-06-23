@@ -47,6 +47,7 @@ public class CartAdd2 extends HttpServlet {
 		String item_name = request.getParameter("item_name");
 		int price = Integer.parseInt(request.getParameter("price"));
 		int item_id = Integer.parseInt(request.getParameter("item_id"));
+		int stock = Integer.parseInt(request.getParameter("stock"));
 		
 		HttpSession session = request.getSession();
 		
@@ -59,6 +60,7 @@ public class CartAdd2 extends HttpServlet {
 			i.setItem_name(item_name);
 			i.setPrice(price);
 			i.setItem_id(item_id);
+			i.setStock(stock);
 			i.setCount(1);
 			cart.add(i);	
 			session.setAttribute("cart", cart);
@@ -74,9 +76,13 @@ public class CartAdd2 extends HttpServlet {
 		for(ItemBean i : cart) {
 			if(i.getItem_name().equals(item_name)) {
 			n++;
+			if(i.getCount() < i.getStock()){
 			i.setCount(i.getCount()+1);
 			break;
-			} 
+			} else {
+				break;
+			}
+		 }
 		}
 		    if(n == 0) {
 		    ItemBean i = new ItemBean();
@@ -84,6 +90,7 @@ public class CartAdd2 extends HttpServlet {
 			i.setItem_name(item_name);
 			i.setPrice(price);
 			i.setItem_id(item_id);
+			i.setStock(stock);
 			i.setCount(1);
 			cart.add(i);	
 			session.setAttribute("cart", cart);
