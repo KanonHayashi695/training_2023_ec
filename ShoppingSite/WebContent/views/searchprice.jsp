@@ -12,12 +12,9 @@
 </div>
 </head>
 <body>
-
  <div id="cartContent">
- 
     <%@page import = "jp.co.aforce.bean.ItemBean, java.util.List" %>
     <% List<ItemBean> price = (List<ItemBean>)session.getAttribute("price"); %>
-    
     <% if(price != null){ %>
     <% for(ItemBean i : price){ %>
          <img src="../img/<%=i.getItem_id() %>.jpg" height ="96">
@@ -33,13 +30,11 @@
          </form>
     <% } %>
     <% } %>
-    
     <form action = "carttransition" method = "post">
 </div>
-
     <p><input type = "submit" value = "戻る"></p>
     </form>
-    
 <script src="../js/sample_javascript.js"></script>
 </body>
 <%@include file="../footer.jsp" %>
+</html>
