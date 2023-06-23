@@ -1,18 +1,14 @@
 package jp.co.aforce.cart;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
 import jp.co.aforce.bean.ItemBean;
-
 /**
  * Servlet implementation class CartAdd
  */
@@ -53,7 +49,6 @@ public class CartAdd extends HttpServlet {
 		
 		List<ItemBean> cart = (List<ItemBean>)session.getAttribute("cart");
 		int n = 0;
-		
 		if(cart == null || cart.size() == 0) {
 			cart = new ArrayList<ItemBean>();
 			ItemBean i = new ItemBean();
@@ -64,15 +59,9 @@ public class CartAdd extends HttpServlet {
 			i.setCount(1);
 			cart.add(i);	
 			session.setAttribute("cart", cart);
-			
 			System.out.println("商品を追加しました");
-			
 			request.getRequestDispatcher("itemsearchsuccess.jsp").forward(request,response);
 		}else {
-			
-		
-		
-	
 		for(ItemBean i : cart) {
 			if(i.getItem_name().equals(item_name)) {
 			n++;
@@ -86,7 +75,6 @@ public class CartAdd extends HttpServlet {
 		}
 		    if(n == 0) {
 		    ItemBean i = new ItemBean();
-		
 			i.setItem_name(item_name);
 			i.setPrice(price);
 			i.setItem_id(item_id);
@@ -94,14 +82,10 @@ public class CartAdd extends HttpServlet {
 			i.setCount(1);
 			cart.add(i);	
 			session.setAttribute("cart", cart);
-			
 			System.out.println("商品を追加しました");
-			
 			request.getRequestDispatcher("itemsearchsuccess.jsp").forward(request,response);
 		    }else {
-		    	
 		    request.getRequestDispatcher("itemsearchsuccess.jsp").forward(request,response);
-		    	
 		    }
 		}
 		
