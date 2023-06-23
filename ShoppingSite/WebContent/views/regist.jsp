@@ -8,68 +8,83 @@
 <%@include file="../header.jsp" %>
 <link href="${pageContext.request.contextPath}/css/style.css?20230620" rel="stylesheet" media="all" type="text/css" />
 <link href="${pageContext.request.contextPath}/css/headerStyle.css?20230620" rel="stylesheet" media="all" type="text/css" />
+<link href="${pageContext.request.contextPath}/css/registStyle.css?20230622" rel="stylesheet" media="all" type="text/css" />
 </head>
 <body>
 		   
 	<!-- 登録画面作成 -->
 	<div class="mainContent">
    <form action = "registservlet" method = "post">
-     <p>会員情報登録</p>
-     <p>ID</p>
-    <input type= "text" name = "member_id" required = "required">
+     <h2>会員情報登録</h2>
+     <p>■ID<span class="req">必須</span></p>
+    <input type= "text" name = "member_id" maxlength="20" required = "required" placeholder="※20文字以内の半角英数字">
     
-     <p>パスワード</p>
-    <input type= "text" name = "password" required = "required">
+     <p>■パスワード<span class="req">必須</span></p>
+    <input type= "text" name = "password" maxlength="20" required = "required" placeholder="※20文字以内の半角英数字">
      
-     <p>名前</p>
-    <input type= "text" name = "member_name" required = "required">
+     <p>■名前<span class="req">必須</span></p>
+    <input type= "text" name = "member_name" maxlength="30" required = "required" placeholder="例) 山田 太郎">
     
-     <p>住所</p>
-     <input type= "text" name = "home_address" required = "required">
+     <p>■住所<span class="req">必須</span></p>
+     <input type= "text" name = "home_address" maxlength="120" required = "required"  placeholder="例) 飯田橋">
      
-     <p>生年月日<br>
+     <p>■生年月日<span class="req">必須</span><br>
     <%@taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
-  
-    <select name = "birth_year" required = "required">
-      <c:forEach var = "i" begin = "1920" end = "2020">
-       <option value = "${i}">${i} </option>
-      </c:forEach></select> 年
-  
-    <select name = "birth_month" required = "required">
-      <c:forEach var = "i" begin = "1" end = "12">
-       <option value = "${i}">${i} </option>
-    </c:forEach></select> 月
-  
-    <select name="birth_day" required = "required">
-      <c:forEach var = "i" begin = "1" end = "31">
-       <option value = "${i}">${i} </option>
-      </c:forEach></select>日
+  	<p class="birth">
+    <select id="release_year" name="release_year" required>
+			<option value="">年</option>
+			<% for (int year = 1923; year <= 2024; year++) { %>
+			<option value="<%= year %>"><%= year %></option>
+			<% } %>
+	</select>
+	<select id="release_month" name="release_month" required>
+			<option value="">月</option>
+			<% for (int month = 1; month <= 12; month++) {%>
+			<option value="<%= month %>"><%= month %></option>
+			<% } %>
+		</select>
+
+		<select id="release_day" name="release_day" required>
+			<option value="">日</option>
+			<% for (int day = 1; day <= 31; day++) {%>
+			<option value="<%= day %>"><%= day %></option>
+			<% } %>
+		</select>
+     </p>
      </p>
      
-     <p>職業<br>
-    <select name="job" required = "required">
-      <option value="‐">‐</option>
+     <p>■職業<span class="req">必須</span><br>
+    <select name="job" required = "required" placeholder="例) 山田 太郎">
+      <option value="">※選択してください</option>
       <option value="会社員">会社員</option>
       <option value="自営業">芸人</option>
       <option value="学生">学生</option>
       <option value="その他">その他</option>
     </select></p>
      
-     <p>電話番号<br>
-    <input type = "text" name = "phone_number" required = "required"></p>
+     <p>■電話番号<span class="req">必須</span><br>
+    <input type = "text" name = "phone_number" maxlength="20" required = "required"  placeholder="例) 000-0000-0000"></p>
   
-     <p>メールアドレス<br>
-    <input type = "text" name = "mail_address" required = "required"></p>
-
-    <input type = "submit" value = "登録">
-
-    <button type="buttun" onclick="goBack()">戻る</button> 
+     <p>■メールアドレス<span class="req">必須</span><br>
+    <input type = "text" name = "mail_address" maxlength="30" required = "required"  placeholder="例) info@example.com"></p>
+	<div class="buttons">
+		<button type="button" onclick="goBack()" class="underButton">戻る</button>
+		<input type="reset" value="リセット" class="underButton" onclick="return confirmDelete()">
+	</div>
+		<input type = "submit" value = "登録" class="underButton" id="underButtonMain">
+    
+    
    </form>
    </div>
 	<script>
 		<!-- 戻るボタンがrequiredを無視 -->
 		function goBack(){
 			window.history.back();
+		}
+
+		<!-- リセットボタン押下時の確認 -->
+		function confirmDelete() {
+			return confirm("内容がリセットされますがよろしいですか？");
 		}
 	</script>
    
