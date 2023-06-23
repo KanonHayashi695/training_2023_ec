@@ -4,6 +4,7 @@ body {
 	background-color: #f5f5f5;
 	font-family: Arial, sans-serif;
 }
+
 .mainContent {
 	max-width: 400px;
 	margin: auto;
@@ -21,6 +22,7 @@ form {
 form p {
 	margin-bottom: 20px;
 }
+
 .idp{
 	text-align: left;
 }
@@ -43,15 +45,19 @@ form p input[type="submit"] ,.underButton{
 	cursor: pointer;
 	transition: background-color 0.3s ease;
 }
+
 form p input[type="submit"]:hover {
 	background-color: red;
 }
+
 .loginButton {
 	margin-top: 20px;
 }
+
 .loginButton p {
 	margin-bottom: 10px;
 }
+
 .loginButton .button input[type="submit"] {
 	background-color: #007DDD;
 	color: #fff;
@@ -61,9 +67,11 @@ form p input[type="submit"]:hover {
 	cursor: pointer;
 	transition: background-color 0.3s ease;
 }
+
 .loginButton .button input[type="submit"]:hover {
 	background-color: red;
 }
+
 .underButton:hover {
 	background-color: red;
 }
