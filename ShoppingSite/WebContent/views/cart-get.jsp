@@ -46,13 +46,13 @@
 	   <input type = "submit" value = "カートから削除する">
 	   </form>
 	    
-	   
 	   <% } %>
 	   <% } %> 
 	 
-	   <p>合計：<%=a %>	</p>    
+	   <p>合計：<%=a %></p>    
 	    
-	
+	   <p>購入方法</p> 
+	   
 	   <form action = "cartpurchasetransition" method = "post">
 	    <p><input type = "submit" value = "購入"></p>
 	   </form>

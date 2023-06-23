@@ -16,6 +16,14 @@
          <%=i.getRelease_year() %> : <%=i.getRelease_month() %> : 
          <%=i.getRelease_day() %> : <%=i.getLevel() %> : <%=i.getStock() %><br>
     
+    <form action = "cartadd2" method = "post">
+         <input type="hidden" name="item_name" value="<%=i.getItem_name() %>">
+         <input type="hidden" name="item_id" value="<%=i.getItem_id() %>">
+         <input type="hidden" name="price" value="<%=i.getPrice() %>">
+         <input type="hidden" name="price" value="<%=i.getCount() %>">
+         <input type = "submit" value = "カートに入れる"><br>
+    </form>
+    
     <% } %>
     <% } %>
     
