@@ -38,8 +38,7 @@
          <input type="hidden" name="price" value="<%=i.getCount() %>">
          <input type="hidden" name="stock" value="<%=i.getStock() %>">
          <input type = "submit" value = "カートに入れる"><br>
-         </form>
-	    <%} %>         
+         </form>       
    <% } %>
    <% } %>
          <form action = "itemtransition" method = "post">
