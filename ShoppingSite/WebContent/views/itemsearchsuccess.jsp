@@ -43,12 +43,20 @@
 						<!-- 在庫が無い場合 -->
 						<% if(i.getStock() == 0){ %>
 							<p class="stock itemText1">在庫切れ</p>
+							<!-- 商品詳細ボタン -->
+							<form action = "itemdetail/<%=i.getItem_id() %>.jsp" method = "post" class="underButton">
+								<input type = "submit" value = "商品の詳細を見る" class="itemDataButton ">
+							</form>
 							<p class="cartButtonOff">
 								<input type = "submit" value = "カートに入れる">
 							</p>
 						<%}else{ %>
 						<!-- 在庫がある場合 -->
 							<p class="stock itemText1">在庫:〇</p>
+							<!-- 商品詳細ボタン -->
+							<form action = "itemdetail/<%=i.getItem_id() %>.jsp" method = "post" class="underButton">
+								<input type = "submit" value = "商品の詳細を見る" class="itemDataButton ">
+							</form>
 							<!-- カートに入れる処理 -->
 							<form action = "cartadd" method = "post" class="cartButtonOn">
 								<input type="hidden" name="item_name" value="<%=i.getItem_name() %>">

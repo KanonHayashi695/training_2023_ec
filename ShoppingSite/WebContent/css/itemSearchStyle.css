@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@charset "UTF-8";
+
 /* 全体 */
 body {
 	font-family: Arial, sans-serif;
@@ -53,8 +55,8 @@ body {
 	color: #666666;
 }
 
-/* カートに入れるボタン */
-.cartButtonOn, .cartButtonOff, .stock , .release{
+/* ボタン */
+.cartButtonOn, .cartButtonOff, .underButton, .stock , .release{
 	display: flex;
 	justify-content: flex-end;
 	margin-top: 10px;
@@ -91,6 +93,23 @@ body {
 	font-weight: bold;
 }
 
+/* 商品詳細ボタン */
+.itemDataButton{
+	background-color: #ffffff;
+	color: red;
+	border-color: red;
+	padding: 5px 10px;
+	font-size: 14px;
+	border-radius: 1px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.itemDataButton:hover{
+	color: white;
+	background-color: #888888;
+}
+
 /* 戻るボタン */
 .back input[type="submit"] {
 	background-color: #007DDD;
@@ -107,4 +126,5 @@ body {
 .back input[type="submit"]:hover {
 	background-color: #cc0000;
 }
+
 
