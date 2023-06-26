@@ -67,11 +67,11 @@
   
      <p>■メールアドレス<span class="req">必須</span><br>
     <input type = "text" name = "mail_address" maxlength="30" required = "required"  placeholder="例) info@example.com"></p>
+    <input type="reset" value="入力内容をリセット" class="miniButton" onclick="return confirmDelete()">
 	<div class="buttons">
 		<button type="button" onclick="goBack()" class="underButton">戻る</button>
-		<input type="reset" value="リセット" class="underButton" onclick="return confirmDelete()">
+		<input type = "submit" value = "登録" class="underButton">
 	</div>
-		<input type = "submit" value = "登録" class="underButton" id="underButtonMain">
     
     
    </form>
