@@ -8,12 +8,13 @@
 <%@include file="../header.jsp" %>
 <link href="${pageContext.request.contextPath}/css/headerStyle.css?20230620" rel="stylesheet" media="all" type="text/css" />
 <link href="${pageContext.request.contextPath}/css/style.css?20230620" rel="stylesheet" media="all" type="text/css" />
+<link href="${pageContext.request.contextPath}/css/loginStyle.css?20230620" rel="stylesheet" media="all" type="text/css" />
 </head>
 <body>
 	<div class="mainContent">
 		<form action = "logout2" method = "post">
-			<p>ログアウトしました。</p>
-			<p><input type = "submit" value = "商品一覧ページに戻る"></p>
+			<p class="logoutMessage">ログアウトしました。</p>
+			<p><input type = "submit" value = "トップページへ"></p>
 		</form>
 	</div>
 <%@include file="../footer.jsp" %>

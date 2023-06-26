@@ -23,30 +23,30 @@
 	<% } %> 
 		<header>
 			<div class="title2">
-				<a href="itemsearch.jsp">
+				<a href="${pageContext.request.contextPath}/views/itemsearch.jsp">
 					<h1>DANRAKU</h1>
 					<h2>-台本販売サイト-</h2>
 				</a>
 			</div>
 			<div class="actionButtons">
 				<% if(session.getAttribute("member")!=null){ %>
-					<span class="welcomeMessage"><%= ((MemberBean)session.getAttribute("member")).getMember_id() %>でログイン中</span>
+					<span class="welcomeMessage"><%= ((MemberBean)session.getAttribute("member")).getMember_name() %>でログイン中</span>
 					<div class="hoverMenu">
 						<a class="myPageButton">
 							<img src="${pageContext.request.contextPath}/img/人物アイコン.png" alt="マイページ" width="40" height="40">
 							<div class="menuContent">
-								<a href="update.jsp">登録情報の変更</a>
-								<a href="delete.jsp">登録情報の削除</a>
-								<a href="logout">ログアウト</a>
+								<a href="${pageContext.request.contextPath}/views/update.jsp">登録情報の変更</a>
+								<a href="${pageContext.request.contextPath}/views/delete.jsp">登録情報の削除</a>
+								<a href="http://localhost:8080/ShoppingSite/views/logout">ログアウト</a>
 							</div>
 						</a>
 					</div>
 				<% }else { %>
 					<div class="button welcomeMessage">
-						<a href="login.jsp">ログイン</a>
+						<a href="${pageContext.request.contextPath}/views/login.jsp">ログイン</a>
 					</div>
 				<% } %>
-				<a href="itemtransition2" class="cartButton">
+				<a href="http://localhost:8080/ShoppingSite/views/itemtransition2" class="cartButton">
 					<img src="${pageContext.request.contextPath}/img/カートのアイコン素材.png" alt="カート" width="40" height="40">
 					<div class="cartCount"><%=cartCount %></div>
 				</a>
