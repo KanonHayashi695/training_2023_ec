@@ -24,19 +24,23 @@
    
    <% if(list != null){ %>
    <% for(ItemBean i : list){ %>
+   <%if(i.getItem_id() == 1){ %>
+   <%if(i.getStock() == 0){ %>
+   <p>在庫なし</p>
+   <%}else{ %>
    
-   <form action = "login3" method = "post">
+   <form action = "cartdetail" method = "post">
      <input type="hidden" name="item_name" value="<%=i.getItem_name() %>">
      <input type="hidden" name="item_id" value="<%=i.getItem_id() %>">
      <input type="hidden" name="price" value="<%=i.getPrice() %>">
-     <input type="hidden" name="count" value="<%=i.getCount() %>"  
-     
+     <input type="hidden" name="stock" value="<%=i.getStock() %>">
      <input type="hidden" name="id" value="1">
-     <p><input type = "submit" value = "カートに入れる" class = "cart"></p><br>
+     <input type = "submit" value = "カートに入れる"><br>
    </form>
-   
-   <% } %>
-   <% } %>
+   <% } 
+     }
+    }
+   } %>
 
   <form action = "itemtransition3" method = "post">
    <p><input type = "submit" value = "戻る"  class = "back"></p>

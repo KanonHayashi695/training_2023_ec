@@ -52,7 +52,7 @@ public class SearchPrice extends HttpServlet {
 		try {
 			List<ItemBean> searchPrice = itemDAO2.searchPrice(pricemin, pricemax);
 			if(searchPrice != null || searchPrice.size() == 0) {
-				session.setAttribute("price", searchPrice);
+				session.setAttribute("list", searchPrice);
 				request.getRequestDispatcher("searchprice.jsp").forward(request,response);
 			}else {
 				request.getRequestDispatcher("itemsearchfail.jsp").forward(request,response);

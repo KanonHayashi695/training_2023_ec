@@ -42,38 +42,38 @@
 					<p><input type = "submit" value = "すべて" class="cetegorySearchButton"></p>
 				</form> 
 			    
-				<form action = "searchmanzai" method = "post">
+				<form action = "searchcategory" method = "post">
 					<input type="hidden" name="keyword" value="漫才台本">
 					<p><input type = "submit" value = "漫才台本" class="cetegorySearchButton"></p>
 				</form>
 			   
-				<form action = "searchkonto" method = "post">
+				<form action = "searchcategory" method = "post">
 					<input type="hidden" name="keyword" value="コント台本">
 						<p><input type = "submit" value = "コント台本" class="cetegorySearchButton"></p>
 				</form>
 			   
-				<form action = "searchonly" method = "post">
+				<form action = "searchcategory" method = "post">
 					<input type="hidden" name="keyword" value="ピンネタ台本">
 					<p><input type = "submit" value = "ピンネタ台本" class="cetegorySearchButton"></p>
 				</form>
 			</div>
 			<div class="cetegorySearchButtonContainer">
-				<form action = "searchgag" method = "post">
+				<form action = "searchcategory" method = "post">
 					<input type="hidden" name="keyword" value="一発ギャグ台本"> 
 					<p><input type = "submit" value = "一発ギャグ台本" class="cetegorySearchButton"></p>
 				</form>
 			   
-				<form action = "searchtalk" method = "post">
+				<form action = "searchcategory" method = "post">
 					<input type="hidden" name="keyword" value="エピソードトーク台本">
 					<p><input type = "submit" value = "エピソードトーク台本" class="cetegorySearchButton"></p>
 				</form> 
 			    
-				<form action = "searchcostume" method = "post">
+				<form action = "searchcategory" method = "post">
 				   <input type="hidden" name="keyword" value="舞台衣装"> 
 					<p><input type = "submit" value = "舞台衣装" class="cetegorySearchButton"></p>
 				</form>
 			   
-				<form action = "searchothers" method = "post">
+				<form action = "searchcategory" method = "post">
 					<input type="hidden" name="keyword" value="その他"> 
 					<p><input type = "submit" value = "その他" class="cetegorySearchButton"></p>
 				</form> 

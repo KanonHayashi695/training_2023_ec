@@ -10,22 +10,25 @@
 <link href="${pageContext.request.contextPath}/css/headerStyle_user.css?20230620" rel="stylesheet" media="all" type="text/css" />
 </head>
 <body>
-   
+   <%@page import = "jp.co.aforce.bean.MemberBean, java.util.List" %>
+   <% MemberBean member = (MemberBean)session.getAttribute("member"); %>
    <!-- 登録更新画面作成 -->
    <div class="mainContent">
    <form action = "update3" method = "post">
-     <p>会員情報登録</p>
+    <input type="hidden" name="origin_id" value="<%=member.getMember_id() %>">
+    <input type="hidden" name="member_id" value="<%=member.getMember_id() %>">
+     <p>会員情報変更</p>
      <p>ID</p>
-    <input type= "text" name = "member_id" required = "required">
+    <p><%=member.getMember_id()%></p>
     
      <p>パスワード<br>
-    <input type= "text" name = "password" required = "required"></p>
+    <input type= "text" name = "password" required = "required" value = "<%=member.getPassword()%>"></p>
      
      <p>名前</p>
-    <input type= "text" name = "member_name" required = "required">
+    <input type= "text" name = "member_name" required = "required" value = "<%=member.getMember_name()%>">
     
      <p>住所</p>
-     <input type= "text" name = "home_address" required = "required">
+     <input type= "text" name = "home_address" required = "required" value = "<%=member.getHome_address()%>">
      
      <p>生年月日<br>
     <%@taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
@@ -56,10 +59,10 @@
     </select></p>
      
      <p>電話番号<br>
-    <input type = "text" name = "phone_number" required = "required"></p>
+    <input type = "text" name = "phone_number" required = "required" "required" value = "<%=member.getPhone_number()%>"></p>
   
      <p>メールアドレス<br>
-    <input type = "text" name = "mail_address" required = "required"></p>
+    <input type = "text" name = "mail_address" required = "required" "required" value = "<%=member.getMail_address()%>"></p>
     
     
     <input type = "submit" value = "更新">

@@ -14,7 +14,7 @@
 <body>
    <div id="cartContent">
    <%@page import = "jp.co.aforce.bean.ItemBean, java.util.List" %>
-   <% List<ItemBean> category = (List<ItemBean>)session.getAttribute("category"); %>
+   <% List<ItemBean> category = (List<ItemBean>)session.getAttribute("list"); %>
    
    <% if(category != null){ %>
    <% for(ItemBean i : category){ %>

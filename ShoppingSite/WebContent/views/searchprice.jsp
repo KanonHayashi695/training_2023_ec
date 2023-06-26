@@ -14,7 +14,7 @@
 <body>
  <div id="cartContent">
     <%@page import = "jp.co.aforce.bean.ItemBean, java.util.List" %>
-    <% List<ItemBean> price = (List<ItemBean>)session.getAttribute("price"); %>
+    <% List<ItemBean> price = (List<ItemBean>)session.getAttribute("list"); %>
     <% if(price != null){ %>
     <% for(ItemBean i : price){ %>
          <img src="../img/<%=i.getItem_id() %>.jpg" height ="96">
