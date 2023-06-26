@@ -17,7 +17,10 @@
 
    <h1 class = "logo">コンビニの定員</h1>
    <h2 class = "logo2">1200円</h2>
-   <img src="../../img/1.jpg" height ="315" width="600">
+   
+   <p class = "img"><img src="../../img/1.jpg" height ="315" width="600"></p>
+   
+   <h3 class = "logo3">ここに商品の説明など</h3>
    
    <% if(list != null){ %>
    <% for(ItemBean i : list){ %>
@@ -26,17 +29,17 @@
      <input type="hidden" name="item_name" value="<%=i.getItem_name() %>">
      <input type="hidden" name="item_id" value="<%=i.getItem_id() %>">
      <input type="hidden" name="price" value="<%=i.getPrice() %>">
-     <input type="hidden" name="count" value="<%=i.getCount() %>"
+     <input type="hidden" name="count" value="<%=i.getCount() %>"  
      
      <input type="hidden" name="id" value="1">
-     <input type = "submit" value = "カートに入れる"><br>
+     <p><input type = "submit" value = "カートに入れる" class = "cart"></p><br>
    </form>
    
    <% } %>
    <% } %>
 
   <form action = "itemtransition3" method = "post">
-   <p><input type = "submit" value = "戻る"></p>
+   <p><input type = "submit" value = "戻る"  class = "back"></p>
   </form>
          
 </body>

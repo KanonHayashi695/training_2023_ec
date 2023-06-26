@@ -1,9 +1,68 @@
 @charset "UTF-8";
 
 .logo{
-  text-align: center;
+  text-align: right;
+  margin-top: 25px;
+  width: 1075px;
 }
 
 .logo2{
-  margin: 20px 150px 3px 50px ;
+	text-align: right;
+	width: 1000px;
+	color: orangered;
+}
+
+.logo3{
+	text-align: right;
+	width: 1060px;
+	margin-bottom: 200px;
+	font-size: 20px;
+}
+ 
+ .back:hover{
+    color: #27acd9;
+	background: #fff;
+ }
+
+.back{
+    display: block;
+	text-align: center;
+	text-decoration: none;
+	width: 155px;
+	margin: auto;
+	margin-bottom: 25px;
+	padding: 1rem 4rem;
+	font-weight: bold;
+	border: 2px solid #27acd9;
+	background: #27acd9;
+	color: #fff;
+	transition: 0.5s;
+	border-radius: 6px 6px 6px 6px;
+}
+
+.cart{
+    display: block;
+	text-align: center;
+	text-decoration: none;
+	width: 220px;
+	margin: auto;
+	margin-top: 25px;
+	padding: 1rem 4rem;
+	font-weight: bold;
+	border: 2px solid #27acd9;
+	background: #27acd9;
+	color: #fff;
+	transition: 0.5s;
+	border-radius: 6px 6px 6px 6px;
+}
+
+.cart:hover{
+    color: #27acd9;
+	background: #fff;
+ }
+ 
+.img{
+	margin-left: 20px;
+	padding-bottom: 50px;
+    border-radius: 6px 6px 6px 6px;
 }
