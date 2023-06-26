@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class ItemTransition3
  */
-@WebServlet("/views/itemdetail/itemtransition3")
+@WebServlet("/views/itemtransition3")
 public class ItemTransition3 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

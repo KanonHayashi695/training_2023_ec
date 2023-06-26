@@ -41,7 +41,7 @@
     }
    } %>
 
-  <form action = "itemtransition3" method = "post">
+  <form action = "itemtransition4" method = "post">
    <p><input type = "submit" value = "戻る"  class = "back"></p>
   </form>
          
