@@ -3,20 +3,30 @@
 /* 1.jsp */
 
 .logo{
-    text-align: right;
+    text-align: left;
     margin-top: 25px;
-    width: 1075px;
+    padding-left: 25px;
 }
 
 .logo2{
     text-align: right;
-    width: 1000px;
+    margin-top: 33px;
+    margin-right: 20px;
+    width: 870px;
     color: orangered;
+}
+
+.pictureanddetail{
+    display: flex;
+}
+
+.priceandcart{
+    display: flex;
 }
 
 .logo3{
     text-align: right;
-    width: 1055px;
+    width: 440px;
     margin-top: 10px;
 }
  
@@ -43,11 +53,12 @@
 
 .cart{
     display: block;
-    text-align: center;
+    text-align: right;
     text-decoration: none;
     width: 220px;
     margin: auto;
     margin-top: 25px;
+    margin-left: 120px;
     padding: 1rem 4rem;
     font-weight: bold;
     border: 2px solid #27acd9;
@@ -63,77 +74,6 @@
  }
  
 .img{
+    margin-top: 10px;
     margin-left: 20px;
-}
-
-/* 2.jsp */
-
-.logo4{
-    margin-top: 25px;
-    text-align: right;
-    width: 1020px;
-}
-
-/* 4.jsp */
-
-.logo5{
-    margin-top: 25px;
-    text-align: right;
-    width: 1000px;
-}
-
-/* 5.jsp */
-
-.logo6{
-    margin-top: 25px;
-    text-align: right;
-    width: 1060px;
-}
-
-/* 6.jsp */
-
-.logo7{
-    margin-top: 25px;
-    text-align: right;
-    width: 1060px;
-}
-
-/* 7.jsp */
-
-.logo8{
-    margin-top: 25px;
-    text-align: right;
-    width: 1060px;
-}
-
-/* 8.jsp */
-
-.logo9{
-    margin-top: 25px;
-    text-align: right;
-    width: 1160px;
-}
-
-/* 9.jsp */
-
-.logo10{
-    margin-top: 25px;
-    text-align: right;
-    width: 1045px;
-}
-
-/* 10.jsp */
-
-.logo11{
-    margin-top: 25px;
-    text-align: right;
-    width: 1055px;
-}
-
-/* 11.jsp */
-
-.logo12{
-    margin-top: 25px;
-    text-align: right;
-    width: 1095px;
 }

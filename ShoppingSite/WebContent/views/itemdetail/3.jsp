@@ -16,10 +16,14 @@
    <% List<ItemBean> list = (List<ItemBean>)session.getAttribute("list"); %>
 
    <h1 class = "logo">深海のニワトリ</h1>
-   <h2 class = "logo2">12000円</h2>
-   <h3 class = "logo3">ここに商品の説明など</h3>
    
-   <p class = "img"><img src="../../img/3.jpg" height ="315" width="600"></p>
+   <div class="pictureanddetail">
+    <p class = "img"><img src="../../img/3.jpg" height ="315" width="600"></p>
+    <h3 class = "logo3">ここに商品の説明など</h3>
+   </div>
+   
+   <div class = "priceandcart">
+    <h2 class = "logo2">12000円</h2>
    
    <% if(list != null){ %>
    <% for(ItemBean i : list){ %>
@@ -40,6 +44,7 @@
      }
     }
    } %>
+   </div>
    
    <form action = "itemtransition3" method = "post">
    <p><input type = "submit" value = "戻る"  class = "back"></p>

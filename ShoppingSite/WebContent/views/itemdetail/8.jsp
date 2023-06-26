@@ -15,11 +15,15 @@
    <%@page import = "jp.co.aforce.bean.ItemBean, java.util.List" %>
    <% List<ItemBean> list = (List<ItemBean>)session.getAttribute("list"); %>
 
-   <h1 class = "logo9">定員同士の喧嘩を止めた話</h1>
-   <h2 class = "logo2">2800円</h2>
-   <h3 class = "logo3">ここに商品の説明など</h3>
+   <h1 class = "logo">定員同士の喧嘩を止めた話</h1>
+  
+   <div class="pictureanddetail">
+    <p class = "img"><img src="../../img/8.jpg" height ="315" width="600"></p>
+    <h3 class = "logo3">ここに商品の説明など</h3>
+   </div>
    
-   <p class = "img"><img src="../../img/8.jpg" height ="315" width="600"></p>
+   <div class = "priceandcart">
+    <h2 class = "logo2">2800円</h2>
    
    <% if(list != null){ %>
    <% for(ItemBean i : list){ %>
@@ -40,6 +44,7 @@
      }
     }
    } %>
+   </div>
    
    <form action = "itemtransition3" method = "post">
    <p><input type = "submit" value = "戻る"  class = "back"></p>
