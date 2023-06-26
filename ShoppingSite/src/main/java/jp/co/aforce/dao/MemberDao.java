@@ -101,4 +101,19 @@ public class MemberDao extends Dao{
   		return i;
   	}
      
+     public boolean memberCheck(String member_id) throws Exception{
+ 		Connection con= getConnection();
+ 		PreparedStatement st = con.prepareStatement(
+ 				"SELECT * FROM member_list WHERE member_id = ?"
+ 				);
+ 			st.setString(1, member_id);
+ 			ResultSet rs = st.executeQuery();
+ 			boolean exists = rs.next();
+ 			
+ 			rs.close();
+ 			st.close();
+ 			closeConnection(con);
+ 			 return exists;
+ 	}
+     
 }

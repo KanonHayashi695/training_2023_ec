@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import jp.co.aforce.bean.MemberBean;
 import jp.co.aforce.dao.MemberDao;
@@ -46,6 +47,7 @@ public class RegistServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 		PrintWriter out = response.getWriter();
+		HttpSession session = request.getSession();
 		
 		try {
 			
@@ -72,17 +74,22 @@ public class RegistServlet extends HttpServlet {
 		p.setJob(job);
 		p.setPhone_number(phone_number);
 		p.setMail_address(mail_address);
+		
+		session.setAttribute("register", p);
 	    MemberDao memberDao = new MemberDao();
+	    
+	    if(memberDao.memberCheck(member_id) == true) {
+	    	request.getRequestDispatcher("register_fail.jsp").forward(request,response);
+	    }else {
+	    
 		int line = memberDao.insert(p);
 		
 		if(line > 0) {
-			request.getRequestDispatcher("regist2.jsp").forward(request,response);
-		} else if(line >= 2){
-		    out.println("登録が重複しています。");
-		}else {
-		    out.println("登録できませんでした。");
+			request.getRequestDispatcher("login.jsp").forward(request,response);
+		} else {
+		   out.println("登録できませんでした。");
 		}
-		
+	    }
 		
 		}catch (Exception e) {
 			// TODO 自動生成された catch ブロック
