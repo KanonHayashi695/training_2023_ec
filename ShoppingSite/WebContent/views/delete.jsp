@@ -59,7 +59,7 @@
    <form action = "delete3" method = "post"> 
    
     
-     <p>会員情報登録</p>
+     <p>会員情報削除</p>
      <p>ID</p>
     <input type= "text" name = "member_id" required = "required">
     
