@@ -51,7 +51,7 @@ public class SearchAll extends HttpServlet {
 		try {
 			category = itemDAO2.searchall();
 			if(category != null) {
-			session.setAttribute("category", category);
+			session.setAttribute("list", category);
 			request.getRequestDispatcher("searchcategory.jsp").forward(request,response);
 			} else {
 				request.getRequestDispatcher("itemsearchfail.jsp").forward(request,response);

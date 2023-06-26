@@ -51,18 +51,13 @@ public class MemberDao extends Dao{
 				p.setPhone_number(rs.getString("Phone_number"));
 				p.setMail_address(rs.getString("Mail_address"));
 			}
-				
-			
 			st.close();
 			con.close();
-			
 			return p;
 		}
 	
      public int insert(MemberBean bean) throws Exception {
         
-	
-		
 		Connection con = getConnection();
 		
 		PreparedStatement st = con.prepareStatement(
@@ -81,8 +76,29 @@ public class MemberDao extends Dao{
 		
 		st.close();
 		con.close();
-		return line;
-		
-		
+		return line;		
  }
+     
+     public int updateMember(MemberBean member, String origin_id) throws Exception {
+  		Connection con = getConnection();
+  		PreparedStatement st = con.prepareStatement(
+  				"UPDATE MEMBER_LIST SET member_id=?, password=?, member_name=?, home_address=?, birth_year=?, birth_month=?, birth_day=?, job=?, phone_number=?, mail_address=? WHERE member_id=?"
+  				);
+  		st.setString(1, member.getMember_id());
+ 		st.setString(2, member.getPassword());
+ 		st.setString(3, member.getMember_name());
+ 		st.setString(4, member.getHome_address());
+ 		st.setInt(5, member.getBirth_year());
+ 		st.setInt(6, member.getBirth_month());
+ 		st.setInt(7, member.getBirth_day());
+ 		st.setString(8, member.getJob());
+ 		st.setString(9, member.getPhone_number());
+ 		st.setString(10, member.getMail_address());
+ 		st.setString(11, origin_id);
+  		int i = st.executeUpdate();
+  		st.close();
+  		closeConnection(con);
+  		return i;
+  	}
+     
 }

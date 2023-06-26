@@ -96,8 +96,5 @@ public class CartAdd extends HttpServlet {
 		    request.getRequestDispatcher("itemsearchsuccess.jsp").forward(request,response);
 		    }
 		}
-		
 	}
-		
-
 }

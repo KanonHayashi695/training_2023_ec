@@ -16,14 +16,14 @@ import jp.co.aforce.dao.ItemDAO2;
 /**
  * Servlet implementation class SearchManzai
  */
-@WebServlet("/views/searchmanzai")
-public class SearchManzai extends HttpServlet {
+@WebServlet("/views/searchcategory")
+public class SearchCategory extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SearchManzai() {
+    public SearchCategory() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -51,7 +51,7 @@ public class SearchManzai extends HttpServlet {
 		try {
 			category = itemDAO2.searchCategory(keyword);
 			if(category != null) {
-			session.setAttribute("category", category);
+			session.setAttribute("list", category);
 			request.getRequestDispatcher("searchcategory.jsp").forward(request,response);
 			} else {
 				request.getRequestDispatcher("itemsearchfail.jsp").forward(request,response);
