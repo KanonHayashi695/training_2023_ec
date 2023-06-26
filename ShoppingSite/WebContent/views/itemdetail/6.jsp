@@ -33,7 +33,7 @@
      <input type="hidden" name="item_id" value="<%=i.getItem_id() %>">
      <input type="hidden" name="price" value="<%=i.getPrice() %>">
      <input type="hidden" name="stock" value="<%=i.getStock() %>">
-     <input type="hidden" name="id" value="1">
+     <input type="hidden" name="id" value="6">
      <input type = "submit" value = "カートに入れる" class = "cart"><br>
    </form>
    <% } 
