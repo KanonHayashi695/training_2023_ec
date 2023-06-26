@@ -50,17 +50,17 @@ public class Update3 extends HttpServlet {
 		HttpSession session = request.getSession();
 		
 		try {
-		String origin_id =request.getParameter("origin_id");	
-		String member_id =request.getParameter("member_id");
-		String password =request.getParameter("password");
-		String member_name =request.getParameter("member_name");
-		String home_address =request.getParameter("home_address");
-		int birth_year = Integer.parseInt(request.getParameter("birth_year"));
-		int birth_month = Integer.parseInt(request.getParameter("birth_month"));
-		int birth_day  = Integer.parseInt(request.getParameter("birth_day"));
-		String job = request.getParameter("job");
-		String phone_number = request.getParameter("phone_number");
-		String mail_address =request.getParameter("mail_address");
+			String origin_id =request.getParameter("origin_id");	
+			String member_id =request.getParameter("member_id");
+			String password =request.getParameter("password");
+			String member_name =request.getParameter("member_name");
+			String home_address =request.getParameter("home_address");
+			int birth_year = Integer.parseInt(request.getParameter("birth_year"));
+			int birth_month = Integer.parseInt(request.getParameter("birth_month"));
+			int birth_day  = Integer.parseInt(request.getParameter("birth_day"));
+			String job = request.getParameter("job");
+			String phone_number = request.getParameter("phone_number");
+			String mail_address =request.getParameter("mail_address");
 		
         MemberBean p = new MemberBean();
 		
