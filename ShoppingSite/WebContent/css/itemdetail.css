@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+/* 1.jsp */
+
 .logo{
     text-align: right;
     margin-top: 25px;
@@ -12,7 +14,7 @@
 }
 .logo3{
     text-align: right;
-    width: 1060px;
+    width: 1055px;
     margin-top: 10px;
 }
  
@@ -59,5 +61,76 @@
     margin-left: 20px;
     margin-top: auto;
     margin-bottom: auto;
-    border-radius: 6px 6px 6px 6px;
+}
+
+/* 2.jsp */
+
+.logo4{
+	margin-top: 25px;
+    text-align: right;
+    width: 1020px;
+}
+
+/* 4.jsp */
+
+.logo5{
+	margin-top: 25px;
+    text-align: right;
+    width: 1000px;
+}
+
+/* 5.jsp */
+
+.logo6{
+	margin-top: 25px;
+    text-align: right;
+    width: 1060px;
+}
+
+/* 6.jsp */
+
+.logo7{
+	margin-top: 25px;
+    text-align: right;
+    width: 1060px;
+}
+
+/* 7.jsp */
+
+.logo8{
+	margin-top: 25px;
+    text-align: right;
+    width: 1060px;
+}
+
+/* 8.jsp */
+
+.logo9{
+	margin-top: 25px;
+    text-align: right;
+    width: 1160px;
+}
+
+/* 9.jsp */
+
+.logo10{
+	margin-top: 25px;
+    text-align: right;
+    width: 1045px;
+}
+
+/* 10.jsp */
+
+.logo11{
+	margin-top: 25px;
+    text-align: right;
+    width: 1055px;
+}
+
+/* 11.jsp */
+
+.logo12{
+	margin-top: 25px;
+    text-align: right;
+    width: 1095px;
 }

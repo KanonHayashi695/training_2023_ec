@@ -9,16 +9,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class ItemTransition3
+ * Servlet implementation class ItemTransition4
  */
-@WebServlet("/views/itemdetail/itemtransition3")
-public class ItemTransition3 extends HttpServlet {
+@WebServlet("/views/itemdetail/itemtransition4")
+public class ItemTransition4 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ItemTransition3() {
+    public ItemTransition4() {
         super();
         // TODO Auto-generated constructor stub
     }
