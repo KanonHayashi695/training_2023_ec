@@ -47,6 +47,7 @@ public class Search extends HttpServlet {
 		
 		
 		HttpSession session =request.getSession();
+		session.removeAttribute("register");
 		
         String member_id = request.getParameter("member_id");
         String password = request.getParameter("password");
@@ -63,7 +64,8 @@ public class Search extends HttpServlet {
 				session.setAttribute("member", bean);
 				request.getRequestDispatcher("itemsearch.jsp").forward(request,response);
 			} else {
-				request.getRequestDispatcher("nologin.jsp").forward(request,response);			
+				request.setAttribute("error", "※IDまたはパスワードが間違っています");
+				request.getRequestDispatcher("login.jsp").forward(request,response);			
 			}
 			}
 		} catch (Exception e) {

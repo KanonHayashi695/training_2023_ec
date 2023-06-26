@@ -61,9 +61,15 @@
         <option value="コンビニ">コンビニ</option>
       </select></p> 
 	
+	<%@page import = "jp.co.aforce.bean.MemberBean, java.util.List" %>
+	<% MemberBean member = (MemberBean)session.getAttribute("member"); %>
+	<%if(member != null){%>
 	   <form action = "cartpurchasetransition" method = "post">
 	    <p><input type = "submit" value = "購入"></p>
 	    </form>
+	<%}else{ %>
+		<p>商品購入の際はログインしてください</p>
+		<%} %>
 	    
 		<div>
 			<p><button type="button" onclick="goBack()" class="Button">戻る</button></p>
