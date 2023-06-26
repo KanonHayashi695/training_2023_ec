@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 .logo{
-  text-align: right;
-  margin-top: 25px;
-  width: 1075px;
+    text-align: right;
+    margin-top: 25px;
+    width: 1075px;
 }
 
 .logo2{
@@ -15,8 +15,7 @@
 .logo3{
 	text-align: right;
 	width: 1060px;
-	margin-bottom: 200px;
-	font-size: 20px;
+	margin-top: 10px;
 }
  
  .back:hover{
@@ -63,6 +62,7 @@
  
 .img{
 	margin-left: 20px;
-	padding-bottom: 50px;
+	margin-top: auto;
+	margin-bottom: auto;
     border-radius: 6px 6px 6px 6px;
 }
