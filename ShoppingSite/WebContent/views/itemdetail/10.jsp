@@ -18,16 +18,35 @@
    <h1 class = "logo">牛丼屋の定員</h1>
    
    <div class="pictureanddetail">
-    <p class = "img"><img src="../../img/10.jpg" height ="315" width="600"></p>
+    <p class = "img"><img src="../../img/10.jpg" height ="280" width="600"></p>
     <h3 class = "logo3">ここに商品の説明など</h3>
    </div>
     
-   <div class = "priceandcart">
+   <div class = "priceandcartandback">
+    <p><button type="button" onclick="goBack()" class="back">戻る</button></p>
+	 <script>
+		<!-- 戻るボタンの挙動 -->
+		function goBack(){
+			window.history.back();
+		}
+	 </script>
     <h2 class = "logo2">13000円</h2>
    
    <% if(list != null){ %>
    <% for(ItemBean i : list){ %>
    <%if(i.getItem_id() == 10){ %>
+   
+<%-- お気に入り機能 --%>
+    <%@page import = "jp.co.aforce.bean.MemberBean" %>
+	<% MemberBean member = (MemberBean)session.getAttribute("member"); %>
+	<%if(member != null){%>
+    <form action = "favorite_add" method="post">
+	<input type="hidden" name="id" value="<%=i.getItem_id() %>">
+	<input type="submit" value="お気に入り登録" class = "star">
+	</form>
+	<%} %>
+<%--　ここまで --%>	
+   
    <%if(i.getStock() == 0){ %>
    <p>在庫なし</p>
    <%}else{ %>
@@ -45,11 +64,7 @@
     }
    } %>
    </div>
-   
-   <form action = "itemtransition3" method = "post">
-   <p><input type = "submit" value = "戻る"  class = "back"></p>
-   </form>
-
+ 
 </body>
 <%@include file="../../footer.jsp" %>
 </html>

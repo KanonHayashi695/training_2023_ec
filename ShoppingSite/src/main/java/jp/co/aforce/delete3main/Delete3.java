@@ -7,7 +7,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import jp.co.aforce.bean.MemberBean;
 import jp.co.aforce.dao.MemberDao;
 
 /**
@@ -40,27 +42,48 @@ public class Delete3 extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
+		
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
+		HttpSession session = request.getSession();
 		
-		try {
+	    MemberBean m = (MemberBean) session.getAttribute("member");
+	    String id = m.getMember_id();
+	    
+		MemberDao memberDao = new MemberDao();
+		 try {
+			 
+			int line = memberDao.delete(id);
+			if(line > 0) {
+		        	request.getRequestDispatcher("delete-reg.jsp").forward(request,response);
+		        } else {
+		        	request.getRequestDispatcher("delete3.jsp").forward(request,response);
+		        }
 			
-		String member_id =request.getParameter("member_id");
-		String password =request.getParameter("password");
-		
-        MemberDao memberDao =  new MemberDao();
-        int line = memberDao.delete(member_id, password);
-        
-        if(line > 0) {
-        	request.getRequestDispatcher("delete2.jsp").forward(request,response);
-        } else {
-        	request.getRequestDispatcher("delete3.jsp").forward(request,response);
-        }
-        
-		}catch (Exception e) {
+		} catch (Exception e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		}
+	
+		
+//		try {
+//			
+//		String member_id =request.getParameter("member_id");
+//	//	String password =request.getParameter("password");
+//		
+//        MemberDao memberDao =  new MemberDao();
+//        int line = memberDao.delete(member_id);
+//        
+//        if(line > 0) {
+//        	request.getRequestDispatcher("delete-reg.jsp").forward(request,response);
+//        } else {
+//        	request.getRequestDispatcher("delete3.jsp").forward(request,response);
+//        }
+//        
+//		}catch (Exception e) {
+//			// TODO 自動生成された catch ブロック
+//			e.printStackTrace();
+//		}
 	
 	}
 

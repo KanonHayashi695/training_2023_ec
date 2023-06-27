@@ -36,7 +36,7 @@
 							<img src="${pageContext.request.contextPath}/img/人物アイコン.png" alt="マイページ" width="40" height="40">
 							<div class="menuContent">
 								<a href="${pageContext.request.contextPath}/views/update.jsp">登録情報の変更</a>
-								<a href="${pageContext.request.contextPath}/views/delete.jsp">登録情報の削除</a>
+								<a href="http://localhost:8080/ShoppingSite/views/delete3">登録情報の削除</a>
 								<a href="http://localhost:8080/ShoppingSite/views/logout">ログアウト</a>
 							</div>
 						</a>

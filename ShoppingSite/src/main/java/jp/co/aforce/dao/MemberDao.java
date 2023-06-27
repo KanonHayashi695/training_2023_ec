@@ -7,16 +7,16 @@ import java.sql.ResultSet;
 import jp.co.aforce.bean.MemberBean;
 
 public class MemberDao extends Dao{
-	public int delete(String member_id, String password) 
+	public int delete(String member_id) 
 		    throws Exception{
 			
 		
 			Connection con = getConnection();
 			
 			PreparedStatement st = con.prepareStatement(
-					"delete from member_list where member_id=? and password=? ");
+					"delete from member_list where member_id=?");
 			st.setString(1, member_id);
-			st.setString(2, password);	
+			//st.setString(2, password);	
 			int line = st.executeUpdate();
 			
 			
