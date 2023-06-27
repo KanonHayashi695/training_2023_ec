@@ -24,14 +24,27 @@
    
    <div class = "priceandcart">
     <h2 class = "logo2">1200円</h2>
+    
+   
    
    <% if(list != null){ %>
    <% for(ItemBean i : list){ %>
    <%if(i.getItem_id() == 1){ %>
+   
+<%-- お気に入り機能 --%>
+    <%@page import = "jp.co.aforce.bean.MemberBean %>
+	<% MemberBean member = (MemberBean)session.getAttribute("member"); %>
+	<%if(member != null){%>
+    <form action = "favorite_add" method="post">
+	<input type="hidden" name="id" value="<%=i.getItem_id() %>">
+	<input type="submit" value="お気に入り登録">
+	</form>
+	<%} %>
+<%--　ここまで --%>	
+
    <%if(i.getStock() == 0){ %>
    <p>在庫なし</p>
    <%}else{ %>
-   
    <form action = "cartdetail" method = "post">
      <input type="hidden" name="item_name" value="<%=i.getItem_name() %>">
      <input type="hidden" name="item_id" value="<%=i.getItem_id() %>">
