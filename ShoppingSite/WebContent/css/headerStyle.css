@@ -17,17 +17,26 @@ header {
     align-items: center;
     color: #FFF;
 }
+
 .title {
     text-align: left;
 }
+
+.title a{
+	color: white;
+	text-decoration: none;
+}
+
 .title h1 {
     font-size: 30px;
     margin: 0;
 }
+
 .title h2 {
     font-size: 18px;
     margin: 0;
 }
+
 .button a {
     background-color: #FFF;
     color: #007DDD;
@@ -36,6 +45,7 @@ header {
     font-weight: bold;
     border-radius: 4px;
 }
+
 .button a:hover {
     background-color: rgb(255, 0, 0);
     color: #FFF;

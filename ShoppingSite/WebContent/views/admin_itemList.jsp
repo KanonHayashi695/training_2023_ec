@@ -6,7 +6,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>サイト名_商品情報検索結果_管理者</title>
+	<title>DANRAKU_商品情報検索結果_管理者</title>
 </head>
 <body>
 <%@ page import="jp.co.aforce.bean.ItemBean" %>

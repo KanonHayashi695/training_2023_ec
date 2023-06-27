@@ -64,7 +64,7 @@ public class Search extends HttpServlet {
 				session.setAttribute("member", bean);
 				request.getRequestDispatcher("itemsearch.jsp").forward(request,response);
 			} else {
-				request.setAttribute("error", "※IDまたはパスワードが間違っています");
+				request.setAttribute("error", "<h4>※IDまたはパスワードが間違っています</h4>");
 				request.getRequestDispatcher("login.jsp").forward(request,response);			
 			}
 			}
