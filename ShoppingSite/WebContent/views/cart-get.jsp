@@ -5,12 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>DANRAKU_カート画面</title>
-<!-- <div id = "headerview"> -->
+<!--  <div id = "headerview">-->
 <%@include file="../header_user.jsp" %>
 <link href="${pageContext.request.contextPath}/css/headerStyle_user.css?20230620" rel="stylesheet" media="all" type="text/css" />
 <link href="${pageContext.request.contextPath}/css/cartStyle.css?20230626" rel="stylesheet" media="all" type="text/css" />
 <link href="${pageContext.request.contextPath}/css/style.css?20230626" rel="stylesheet" media="all" type="text/css" />
-<!--</div>-->
+<!-- </div>-->
 </head>
 <body>
 <!-- カート画面 -->

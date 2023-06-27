@@ -26,7 +26,7 @@
     <input type= "text" name = "member_name" maxlength="30" required = "required" placeholder="例) 山田 太郎" >
     
      <p>■住所<span class="req">必須</span></p>
-     <input type= "text" name = "home_address" maxlength="120" required = "required"  placeholder="例) 飯田橋">
+     <input type= "text" name = "home_address" maxlength="120" required = "required"  placeholder="例) 東京都千代田区飯田橋0-0-0">
      
      <p>■生年月日<span class="req">必須</span><br>
     <%@taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
