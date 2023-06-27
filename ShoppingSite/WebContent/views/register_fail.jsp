@@ -17,17 +17,14 @@
 	<div class="mainContent">
    <form action = "registservlet" method = "post">
      <h2>会員情報登録</h2>
-     <p>■ID<span class="req">必須</span></p>
-    <input type= "text" name = "member_id" maxlength="20" required = "required"  pattern="^[a-zA-Z0-9]+$" placeholder="※20文字以内の半角英数字" >
+     <p>■ID<span class="req">必須</span><span class="idMes">※そのIDは既に使用されています</span></p>
+    <input type= "text" name = "member_id" maxlength="20" required = "required"  pattern="^[a-zA-Z0-9]+$" placeholder="※20文字以内の半角英数字" value = "<%=r.getMember_id() %>">
      <p>■パスワード<span class="req">必須</span></p>
     <input type= "password" name = "password" maxlength="20" required = "required"  pattern="^[a-zA-Z0-9]+$" placeholder="※20文字以内の半角英数字">
-     
      <p>■名前<span class="req">必須</span></p>
-    <input type= "text" name = "member_name" maxlength="30" required = "required" placeholder="例) 山田 太郎" >
-    
+    <input type= "text" name = "member_name" maxlength="30" required = "required" placeholder="例) 山田 太郎" value = "<%=r.getMember_name() %>">
      <p>■住所<span class="req">必須</span></p>
-     <input type= "text" name = "home_address" maxlength="120" required = "required"  placeholder="例) 飯田橋">
-     
+     <input type= "text" name = "home_address" maxlength="120" required = "required"  placeholder="例) 飯田橋" value = "<%=r.getHome_address() %>">
      <p>■生年月日<span class="req">必須</span><br>
     <%@taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
   	<p class="birth">
@@ -43,7 +40,6 @@
 			<option value="<%= month %>"><%= month %></option>
 			<% } %>
 		</select>
-
 		<select id="release_day" name="birth_day" required>
 			<option value="">日</option>
 			<% for (int day = 1; day <= 31; day++) {%>
@@ -52,7 +48,6 @@
 		</select>
      </p>
      </p>
-     
      <p>■職業<span class="req">必須</span><br>
     <select name="job" required = "required" placeholder="例) 山田 太郎">
       <option value="">※選択してください</option>
@@ -61,19 +56,16 @@
       <option value="学生">学生</option>
       <option value="その他">その他</option>
     </select></p>
-     
      <p>■電話番号<span class="req">必須</span><br>
-    <input type = "text" name = "phone_number" maxlength="20" required = "required"  placeholder="例) 000-0000-0000"></p>
-  
+    <input type = "text" name = "phone_number" maxlength="20" required = "required"  placeholder="例) 000-0000-0000" value = "<%=r.getPhone_number() %>"></p>
      <p>■メールアドレス<span class="req">必須</span><br>
-    <input type = "email" name = "mail_address" maxlength="30" required = "required" placeholder="例) info@example.com" class="mail"></p>
+    <input type = "text" name = "mail_address" maxlength="30" required = "required"  placeholder="例) info@example.com" value = "<%=r.getMail_address() %>"></p>
     <input type="reset" value="入力内容をリセット" class="miniButton" onclick="return confirmDelete()">
 	
 	<div class="buttons">
 		<button type="button" onclick="goBack()" class="underButton">戻る</button>
 		<input type = "submit" value = "登録" class="underButton">
 	</div>
- 
    </form>
    </div>
 	<script>
@@ -81,11 +73,18 @@
 		function goBack(){
 			window.history.back();
 		}
-
 		<!-- リセットボタン押下時の確認 -->
 		function confirmDelete() {
 			return confirm("内容がリセットされますがよろしいですか？");
 		}
 	</script>
-   
 <%@include file="../footer.jsp" %>
+
+
+
+
+
+
+
+
+

@@ -22,7 +22,7 @@ form p {
 	margin: 10px 0;
 }
 
-input[type="text"],
+input[type="text"], .mail,
 input[type="password"],
 select {
 	width: 300px;
@@ -98,4 +98,9 @@ h2{
 
 .miniButton:hover{
 	background-color: red;
+}
+
+.idMes {
+	color: red;
+	font-weight: bold;
 }

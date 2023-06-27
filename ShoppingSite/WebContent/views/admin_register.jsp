@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>サイト名_商品情報登録_管理者</title>
+<title>DANRAKU_商品情報登録_管理者</title>
 </head>
 <body>
 

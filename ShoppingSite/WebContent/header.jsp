@@ -13,8 +13,10 @@
 	<body>
 		<header>
 			<div class="title">
-				<h1>DANRAKU</h1>
-				<h2>-台本販売サイト-</h2>
+				<a href="${pageContext.request.contextPath}/views/itemsearch.jsp"></a>
+					<h1>DANRAKU</h1>
+					<h2>-台本販売サイト-</h2>
+				</a>
 			</div>
 			<div class="button">
 				<a href="login.jsp">ログイン</a>

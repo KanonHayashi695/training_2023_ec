@@ -8,12 +8,14 @@
 <%@include file="../header_user.jsp" %>
 <link href="${pageContext.request.contextPath}/css/headerStyle_user.css?20230620" rel="stylesheet" media="all" type="text/css" />
 <link href="${pageContext.request.contextPath}/css/style.css?20230620" rel="stylesheet" media="all" type="text/css" />
+<link href="${pageContext.request.contextPath}/css/itemSearchStyle.css?20230626" rel="stylesheet" media="all" type="text/css" />
 </head>
 <body>
 	<div class="cartContentNull">
-   <p>該当する商品はありません。</p>
-  <form action = "itemtransition" method = "post">
-   <input type = "submit" value = "戻る">
-  </form>
-  </div>
+		<!-- 戻るボタン -->
+		<form action = "itemtransition" method = "post" class="back">
+			<p><input type = "submit" value = "←商品検索ページへ戻る"></p>
+		</form>
+		<p>該当する商品が見つかりませんでした。</p>
+	</div>
 <%@include file="../footer.jsp" %>

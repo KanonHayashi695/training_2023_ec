@@ -36,10 +36,6 @@ main{
 	margin: auto;
 }
 /*カートページ*/
-.cartContent, .cartContentNull{
-	margin: auto;
-	margin-left: 2%;
-}
 #cartContent{
 	margin: auto;
 	margin-left: 2%;
