@@ -110,9 +110,14 @@
 			</div>
 		</div>
 	</div>
-			<%--  お気に入りボタン 
+			<%--お気に入りボタン 
 				<form action = "favorite_view" method = "post">
-					<p><input type = "subm　it" value ="お気に入り一覧"></p>
-				</form>       --%>
+					<p><input type = "submit" value ="お気に入り一覧"></p>
+				</form>--%>
+				
+		 	<%--購入履歴ボタン 
+				<form action = "historyget" method = "post">
+					<p><input type = "submit" value ="お気に入り一覧"></p>
+				</form> --%>
   
 <%@include file="../footer.jsp" %>

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>DANRAKU_お気に入り</title>
+<title>DANRAKU_購入履歴</title>
 <%@include file="../header.jsp" %>
 <link href="${pageContext.request.contextPath}/css/headerStyle.css?20230620" rel="stylesheet" media="all" type="text/css" />
 <link href="${pageContext.request.contextPath}/css/style.css?20230620" rel="stylesheet" media="all" type="text/css" />
@@ -13,7 +13,7 @@
 <body>
 	<div class="mainContent">
 		<form action = "logout2" method = "post">
-			<p class="logoutMessage">お気に入りの商品はありません</p>
+			<p class="logoutMessage">購入履歴はありません。</p>
 			<p><input type = "submit" value = "トップページへ"></p>
 		</form>
 	</div>
