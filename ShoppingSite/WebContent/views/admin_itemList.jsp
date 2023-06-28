@@ -7,6 +7,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>DANRAKU_商品情報検索結果_管理者</title>
+<%@include file="../headerAdmin.jsp" %>
+<link href="${pageContext.request.contextPath}/css/headerStyle.css?20230628" rel="stylesheet" media="all" type="text/css" />
+<link href="${pageContext.request.contextPath}/css/style.css?20230620" rel="stylesheet" media="all" type="text/css" />
 </head>
 <body>
 <%@ page import="jp.co.aforce.bean.ItemBean" %>
@@ -15,6 +18,7 @@
 <%	try {
 	List<ItemBean> item = (List<ItemBean>) request.getAttribute("item");
 %>
+<div class="mainContent">
 	<h2>商品情報の更新と削除</h2>
     <table border="1">
 		<tr>
@@ -55,12 +59,12 @@
 	</script>
 	    
 	<a href="admin_itemSearchForm.jsp">商品検索</a>
-	
+	<a href="admin_index.jsp">管理者画面に戻る</a><br>
+</div>
 	
 <% 
 } catch (Exception e) {
 	e.printStackTrace();
 }
 %>
-</body>
-</html>
+<%@include file="../footer.jsp" %>

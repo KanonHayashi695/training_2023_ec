@@ -18,8 +18,9 @@
 					<h2>-台本販売サイト-</h2>
 				</a>
 			</div>
+			<a class="adminMessage">管理者権限でログイン中</a>
 			<div class="button">
-				<a href="login.jsp">ログイン</a>
+				<a href="login.jsp">他のユーザーでログイン</a>
 			</div>
 		</header>
 	</body>

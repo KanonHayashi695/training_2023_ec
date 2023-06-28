@@ -18,8 +18,9 @@
 		<% List<ItemBean> list = (List<ItemBean>)session.getAttribute("list"); %>
 		<!-- 戻るボタン -->
 		<form action = "itemtransition" method = "post" class="back">
-			<p><input type = "submit" value = "←商品検索ページへ"></p>
+			<p><input type = "submit" value = "←トップページへ"></p>
 		</form>
+		<h3 class="midashi">★お気に入り商品一覧</h3>
 		<!-- 検索結果リスト -->
 		<% if(list != null){ %>
 			<% for(ItemBean i : list){ %>

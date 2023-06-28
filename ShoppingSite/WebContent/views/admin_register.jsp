@@ -5,9 +5,12 @@
 <head>
 <meta charset="UTF-8">
 <title>DANRAKU_商品情報登録_管理者</title>
+<%@include file="../headerAdmin.jsp" %>
+<link href="${pageContext.request.contextPath}/css/headerStyle.css?20230628" rel="stylesheet" media="all" type="text/css" />
+<link href="${pageContext.request.contextPath}/css/style.css?20230620" rel="stylesheet" media="all" type="text/css" />
 </head>
 <body>
-
+<div class="mainContent">
 <h2>商品情報の登録</h2>
 
 	<form method="post" action="Item_registerServlet">
@@ -75,7 +78,7 @@
 		<input type="reset" value="リセット">
 		<button type="button" onclick="goBack()">戻る</button>
 	</form>
-	
+</div>
 	<script>
 		<!-- 戻るボタンがrequiredを無視 -->
 		function goBack(){
@@ -83,5 +86,4 @@
 		}
 	</script>
 
-</body>
-</html>
+<%@include file="../footer.jsp" %>
