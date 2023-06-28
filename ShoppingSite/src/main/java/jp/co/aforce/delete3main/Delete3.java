@@ -55,6 +55,7 @@ public class Delete3 extends HttpServlet {
 			 
 			int line = memberDao.delete(id);
 			if(line > 0) {
+				    session.removeAttribute("member");
 		        	request.getRequestDispatcher("delete-reg.jsp").forward(request,response);
 		        } else {
 		        	request.getRequestDispatcher("delete3.jsp").forward(request,response);
@@ -64,26 +65,6 @@ public class Delete3 extends HttpServlet {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		}
-	
-		
-//		try {
-//			
-//		String member_id =request.getParameter("member_id");
-//	//	String password =request.getParameter("password");
-//		
-//        MemberDao memberDao =  new MemberDao();
-//        int line = memberDao.delete(member_id);
-//        
-//        if(line > 0) {
-//        	request.getRequestDispatcher("delete-reg.jsp").forward(request,response);
-//        } else {
-//        	request.getRequestDispatcher("delete3.jsp").forward(request,response);
-//        }
-//        
-//		}catch (Exception e) {
-//			// TODO 自動生成された catch ブロック
-//			e.printStackTrace();
-//		}
 	
 	}
 

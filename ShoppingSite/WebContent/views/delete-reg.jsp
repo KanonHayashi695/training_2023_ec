@@ -4,29 +4,17 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>DANRAKU_会員情報削除</title>
-<%@include file="../header_user.jsp" %>
+<title>DANRAKU_ログアウト</title>
+<%@include file="../header.jsp" %>
+<link href="${pageContext.request.contextPath}/css/headerStyle.css?20230620" rel="stylesheet" media="all" type="text/css" />
 <link href="${pageContext.request.contextPath}/css/style.css?20230620" rel="stylesheet" media="all" type="text/css" />
-<link href="${pageContext.request.contextPath}/css/headerStyle_user.css?20230620" rel="stylesheet" media="all" type="text/css" />
+<link href="${pageContext.request.contextPath}/css/loginStyle.css?20230620" rel="stylesheet" media="all" type="text/css" />
 </head>
 <body>
-   
-   <div class="mainContent">
-   
-     <p>削除されました</p>
-    
-		<div>
-			<p><button type="button" onclick="goBack()" class="Button">戻る</button></p>
-		</div>
-   </div>
-   
-	<script>
-		<!-- 戻るボタンの挙動 -->
-		function goBack(){
-			window.history.back();
-		}
-	</script>
+	<div class="mainContent">
+		<form action = "logout2" method = "post">
+			<p class="logoutMessage">削除しました。</p>
+			<p><input type = "submit" value = "トップページへ"></p>
+		</form>
+	</div>
 <%@include file="../footer.jsp" %>
-   
-</body>
-</html>

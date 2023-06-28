@@ -9,7 +9,7 @@
 <body>
 
   <form action = "logout3" method = "post">
-   <p>ログアウトに失敗しました。</p>
+   <p>ログアウトしました。</p>
    <p><input type = "submit" value = "戻る"></p>
   </form>
 
