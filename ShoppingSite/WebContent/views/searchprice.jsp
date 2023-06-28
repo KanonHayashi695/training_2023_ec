@@ -28,7 +28,7 @@
 						<div class="box">
 							<!-- 商品画像 -->
 							<img src="../img/<%=i.getItem_id() %>.jpg" height ="96" class="itemImage">
-							<a href="http://localhost:8080/ShoppingSite/views/itemdetail/<%=i.getItem_id() %>.jsp"></a>
+							<a href="${pageContext.request.contextPath}/views/itemdetail/<%=i.getItem_id() %>.jsp"></a>
 						</div>
 						<div class="box">
 						<!-- 商品名 -->

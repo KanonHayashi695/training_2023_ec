@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>DANRAKU_お気に入り</title>
-<%@include file="../header.jsp" %>
+<%@include file="../header_user.jsp" %>
 <link href="${pageContext.request.contextPath}/css/headerStyle.css?20230620" rel="stylesheet" media="all" type="text/css" />
 <link href="${pageContext.request.contextPath}/css/style.css?20230620" rel="stylesheet" media="all" type="text/css" />
 <link href="${pageContext.request.contextPath}/css/loginStyle.css?20230620" rel="stylesheet" media="all" type="text/css" />
