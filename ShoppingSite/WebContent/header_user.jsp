@@ -37,14 +37,14 @@
 							<div class="menuContent">
 								<a href="${pageContext.request.contextPath}/views/update.jsp">登録情報の変更</a>
 								<a href="${pageContext.request.contextPath}/views/deletecheck.jsp">登録情報の削除</a>
-								<a href="http://localhost:8080/ShoppingSite/views/logout">ログアウト</a>
+								<a href="${pageContext.request.contextPath}/views/logout">ログアウト</a>
 							</div>
 						</a>
 					</div>
-					<a href="http://localhost:8080/ShoppingSite/views/favoriteview" class="cartButton">
+					<a href="${pageContext.request.contextPath}/views/favoriteview" class="cartButton">
 						<img src="${pageContext.request.contextPath}/img/お気に入りアイコン.png" alt="お気に入り" width="40" height="40">
 					</a>
-					<a href="http://localhost:8080/ShoppingSite/views/historyget" class="cartButton">
+					<a href="${pageContext.request.contextPath}/views/historyget" class="cartButton">
 						<img src="${pageContext.request.contextPath}/img/購入履歴アイコン.png" alt="購入履歴" width="40" height="40">
 					</a>
 				<% }else { %>
@@ -53,7 +53,7 @@
 					</div>
 
 				<% } %>
-				<a href="http://localhost:8080/ShoppingSite/views/itemtransition2" class="cartButton">
+				<a href="${pageContext.request.contextPath}/views/itemtransition2" class="cartButton">
 					<img src="${pageContext.request.contextPath}/img/カートのアイコン素材.png" alt="カート" width="40" height="40">
 					<div class="cartCount"><%=cartCount %></div>
 				</a>

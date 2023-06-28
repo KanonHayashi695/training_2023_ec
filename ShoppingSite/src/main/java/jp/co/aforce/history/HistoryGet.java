@@ -54,10 +54,10 @@ public class HistoryGet extends HttpServlet {
 		List<ItemBean> list;
 		try {
 			list = dao.getHistoryList(member_id);
-			if(list != null || list.size() != 0) {
+			if(list != null && list.size() != 0) {
 			session.setAttribute("list", list);
 			request.getRequestDispatcher("history_view.jsp").forward(request,response);
-			} else {
+			} else if(list == null || list.size() == 0){
 				request.getRequestDispatcher("history_null.jsp").forward(request,response);
 			}
 		} catch (Exception e) {

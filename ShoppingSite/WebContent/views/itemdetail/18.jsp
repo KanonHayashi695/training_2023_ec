@@ -48,7 +48,7 @@
 <%--　ここまで --%>	
 
    <%if(i.getStock() == 0){ %>
-   <p>在庫なし</p>
+   <p class="zaikoNasi">在庫なし</p>
    <%}else{ %>
    <form action = "cartdetail" method = "post">
      <input type="hidden" name="item_name" value="<%=i.getItem_name() %>">

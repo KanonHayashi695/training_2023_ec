@@ -102,6 +102,10 @@ body {
 }
 
 .star:hover{
-   color: #fff450;
+    color: #fff450;
     background: #fff;
  }
+ 
+ .zaikoNasi{
+    font-weight: bold;
+}
