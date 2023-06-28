@@ -8,6 +8,10 @@
     padding-left: 25px;
 }
 
+body {
+	padding-top: 120px;
+}
+
 .logo2{
     text-align: right;
     margin-top: 20px;
