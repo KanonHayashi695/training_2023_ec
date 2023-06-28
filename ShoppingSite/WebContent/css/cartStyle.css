@@ -173,14 +173,14 @@ tr.cartItem {
 
 .loginMessage a {
 	background-color: #007DDD;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 4px;
+	color: #fff;
+	padding: 10px 20px;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 4px;
 }
 
 .loginMessage a:hover {
 	background-color: #005DC3;
-    color: #fff;
+	color: #fff;
 }
