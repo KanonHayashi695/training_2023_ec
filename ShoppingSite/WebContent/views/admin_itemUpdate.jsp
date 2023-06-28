@@ -9,12 +9,16 @@
 <head>
 <meta charset="UTF-8">
 <title>DANRAKU_商品情報更新_管理者</title>
+<%@include file="../headerAdmin.jsp" %>
+<link href="${pageContext.request.contextPath}/css/headerStyle.css?20230628" rel="stylesheet" media="all" type="text/css" />
+<link href="${pageContext.request.contextPath}/css/style.css?20230620" rel="stylesheet" media="all" type="text/css" />
 </head>
 <body>
 
 <%	try {
 	ItemBean i = (ItemBean) request.getAttribute("item");
 %>
+<div class="mainContent">
 	<h2>商品更新</h2>
 	<form action="Item_updateServlet" method="post">
 
@@ -36,10 +40,11 @@
 		<label for="stock">在庫数:</label>
 		<input type="text" id="stock" name="stock" value="<%= i.getStock() %>"><br>
 		<input type="submit" value="更新">
-		<button type="buttun" onclick="goBack()">戻る</button>
+		
 	
 	</form>
-	
+	<button type="buttun" onclick="goBack()">戻る</button>
+</div>
 	<script>
 		<!-- 戻るボタンがrequiredを無視 -->
 		function goBack(){
@@ -52,5 +57,4 @@
 	e.printStackTrace();
 }
 %>
-</body>
-</html>
+<%@include file="../footer.jsp" %>

@@ -74,6 +74,7 @@ body {
 /* 注文確定ボタン */
 form {
 	text-align: center;
+	padding-bottom: 10px;
 }
 
 form input[type="submit"] {

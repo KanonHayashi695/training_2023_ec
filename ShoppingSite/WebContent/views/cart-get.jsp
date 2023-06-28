@@ -102,7 +102,10 @@
 		</div>
 	<!-- 未ログイン時の処理 -->
 	<%}else{ %>
-		<p>商品購入の際はログインしてください</p>
+		<div class="loginMessage">
+			<p class="loginText">商品購入の際はログインしてください</p>
+			<a href="${pageContext.request.contextPath}/views/login.jsp">ログイン</a>
+		</div>
 		<% } %>
 	</div>
 	<script src="../js/sample_javascript.js">
