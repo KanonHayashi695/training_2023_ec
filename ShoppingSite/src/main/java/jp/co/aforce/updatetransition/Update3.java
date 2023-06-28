@@ -79,7 +79,7 @@ public class Update3 extends HttpServlet {
 		
 		if(line > 0) {
 			session.setAttribute("member", p);
-			request.getRequestDispatcher("itemsearch.jsp").forward(request,response);
+			request.getRequestDispatcher("update_success.jsp").forward(request,response);
 		}else {
 		    out.println("登録できませんでした。");
 		}
