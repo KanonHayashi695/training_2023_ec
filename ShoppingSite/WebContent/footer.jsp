@@ -2,3 +2,5 @@
 <footer>
 	<p>&copy; 2023 DANRAKU.</p>
 </footer>
+</body>
+</html>
