@@ -41,10 +41,17 @@
 							</div>
 						</a>
 					</div>
+					<a href="http://localhost:8080/ShoppingSite/views/favoriteview" class="cartButton">
+						<img src="${pageContext.request.contextPath}/img/お気に入りアイコン.png" alt="お気に入り" width="40" height="40">
+					</a>
+					<a href="http://localhost:8080/ShoppingSite/views/historyget" class="cartButton">
+						<img src="${pageContext.request.contextPath}/img/購入履歴アイコン.png" alt="購入履歴" width="40" height="40">
+					</a>
 				<% }else { %>
 					<div class="button welcomeMessage">
 						<a href="${pageContext.request.contextPath}/views/login.jsp">ログイン</a>
 					</div>
+
 				<% } %>
 				<a href="http://localhost:8080/ShoppingSite/views/itemtransition2" class="cartButton">
 					<img src="${pageContext.request.contextPath}/img/カートのアイコン素材.png" alt="カート" width="40" height="40">

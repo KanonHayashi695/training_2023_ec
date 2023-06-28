@@ -3,24 +3,30 @@
 * {
     margin:0; padding:0;
 }
+
 body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
+
 main{
     flex: 1;
 }
+
 .mainContent{
     margin: auto;
 }
+
 /*ログインor新規登録ページ*/
 .loginButton{
     margin: auto;
 }
+
 .loginButton form{
     text-align: center;
 }
+
 .loginButton input[type="submit"] {
     background-color: #007DDD;
     color: #fff;
@@ -28,22 +34,27 @@ main{
     border: none;
     cursor: pointer;
 }
+
 .loginButton form p.button input[type="submit"]:hover {
     background-color: red;
 }
+
 /*商品ページ*/
 .test{
     margin: auto;
 }
+
 /*カートページ*/
 #cartContent{
     margin: auto;
     margin-left: 2%;
     visibility: hidden;
 }
+
 #headerview{
      visibility: hidden;
 }
+
 .cartContentNull{
     margin-top: 2%;
 }
