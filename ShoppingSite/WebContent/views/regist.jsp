@@ -63,7 +63,7 @@
     </select></p>
      
      <p>■電話番号<span class="req">必須</span><br>
-    <input type = "text" name = "phone_number" maxlength="20" required = "required"  placeholder="例) 000-0000-0000"></p>
+    <input type = "tel" name = "phone_number" maxlength="20" required = "required"  pattern="[\d\-]*" placeholder="例) 000-0000-0000" class="mail"></p>
   
      <p>■メールアドレス<span class="req">必須</span><br>
     <input type = "email" name = "mail_address" maxlength="30" required = "required" placeholder="例) info@example.com" class="mail"></p>
