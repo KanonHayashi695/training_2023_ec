@@ -110,5 +110,16 @@
 			</div>
 		</div>
 	</div>
+<<<<<<< HEAD
+=======
+			
+				<form action = "favorite_view" method = "post">
+					<p><input type = "submit" value ="お気に入り一覧"></p>
+				</form>
+				
+				<form action = "historyget" method = "post">
+					<p><input type = "submit" value ="購入履歴"></p>
+				</form> 
+>>>>>>> branch 'master' of https://github.com/KanonHayashi695/training_2023_ec.git
   
 <%@include file="../footer.jsp" %>

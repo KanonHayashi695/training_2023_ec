@@ -30,31 +30,92 @@
   	<p class="birth">
     <select id="release_year" name="birth_year" required>
 			<option value="">年</option>
-			<% for (int year = 1923; year <= 2024; year++) { %>
+			<%--<% for (int year = 1923; year <= 2024; year++) { 
 			<option value="<%= year %>"><%= year %></option>
-			<% } %>
+			<% } %>--%>
+		<% if (r != null){
+		int year = r.getBirth_year();
+		for(int i = 1919; i < 2024; i++){
+		if(i == year){
+			out.print("<option value=\"" + i + "\" selected>" + i + "</option>");	
+		}else{
+		    out.print("<option value=\"" + i + "\">" + i + "</option>");
+			}
+			}
+		}
+		%>
 	</select>
 	<select id="release_month" name="birth_month" required>
 			<option value="">月</option>
-			<% for (int month = 1; month <= 12; month++) {%>
+			<%--<% for (int month = 1; month <= 12; month++) {
 			<option value="<%= month %>"><%= month %></option>
-			<% } %>
+			<% } %>--%>
+			<%
+		if (r != null){
+		int month = r.getBirth_month();
+		for(int i = 1; i < 13; i++){
+		if(i == month){
+			out.print("<option value=\"" + i + "\" selected>" + i + "</option>");
+		}else{
+		    out.print("<option value=\"" + i + "\">" + i + "</option>");
+			}
+			}
+		}
+		%>
 		</select>
 		<select id="release_day" name="birth_day" required>
 			<option value="">日</option>
-			<% for (int day = 1; day <= 31; day++) {%>
+			<%--<% for (int day = 1; day <= 31; day++) {
 			<option value="<%= day %>"><%= day %></option>
-			<% } %>
+			<% } %>--%>
+			<%
+		if (r != null){
+		int day = r.getBirth_day();
+		for(int i = 1; i < 31; i++){
+		if(i == day){
+			out.print("<option value=\"" + i + "\" selected>" + i + "</option>");
+		}else{
+		    out.print("<option value=\"" + i + "\">" + i + "</option>");
+			}
+			}
+		}
+		%>
 		</select>
      </p>
      </p>
      <p>■職業<span class="req">必須</span><br>
     <select name="job" required = "required" placeholder="例) 山田 太郎">
-      <option value="">※選択してください</option>
+      <%--<option value="">※選択してください</option>
       <option value="会社員">会社員</option>
       <option value="自営業">芸人</option>
       <option value="学生">学生</option>
-      <option value="その他">その他</option>
+      <option value="その他">その他</option>--%>
+	<% 
+	if (r != null){
+		String job = r.getJob();
+	if(job.equals("会社員")){
+		out.println("<option value=\"会社員\" selected>会社員</option>");	
+	}else{
+    	out.println("<option value=\"会社員\">会社員</option>");
+	}
+	if(job.equals("自営業")){
+		out.println("<option value=\"芸人\" selected>自営業</option>");	
+	}else{
+   		out.println("<option value=\"芸人\">自営業</option>");
+	}
+	if(job.equals("学生")){
+		out.println("<option value=\"学生\" selected>学生</option>");	
+	}else{
+    	out.println("<option value=\"学生\">学生</option>");
+	}
+	if(job.equals("その他")){
+		out.println("<option value=\"その他\" selected>その他</option>");	
+	}else{
+    	out.println("<option value=\"その他\">その他</option>");
+		}
+	}
+	%>
+	
     </select></p>
      <p>■電話番号<span class="req">必須</span><br>
     <input type = "text" name = "phone_number" maxlength="20" required = "required"  placeholder="例) 000-0000-0000" value = "<%=r.getPhone_number() %>"></p>
@@ -79,12 +140,3 @@
 		}
 	</script>
 <%@include file="../footer.jsp" %>
-
-
-
-
-
-
-
-
-
